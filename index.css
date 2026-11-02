@@ -1,0 +1,539 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #102447;
+    background: #fff
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+header {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    background: #fff;
+    border-bottom: 1px solid #edf1f7;
+    position: sticky;
+    top: 0;
+    z-index: 10
+}
+
+.logo {
+    width: 170px;
+    height: auto
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.nav a {
+    padding: 28px 0
+}
+
+.nav a:hover,
+.nav .active {
+    color: #0875e1;
+    border-bottom: 3px solid #0875e1
+}
+
+.contact-btn {
+    background: #0756b8;
+    color: white !important;
+    padding: 11px 20px !important;
+    border-radius: 24px;
+    border: 0 !important
+}
+
+.page-hero {
+    padding: 75px 8%;
+    background: linear-gradient(110deg, #06204c, #006fe5);
+    color: white
+}
+
+.page-hero span,
+.eyebrow {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 700
+}
+
+.page-hero h1 {
+    font-size: 48px;
+    margin: 12px 0
+}
+
+.page-hero p {
+    font-size: 18px;
+    max-width: 650px;
+    line-height: 1.6
+}
+
+.content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 30px
+}
+
+.content h2 {
+    font-size: 32px;
+    margin-top: 0
+}
+
+.content p {
+    line-height: 1.7;
+    color: #53627a
+}
+
+.two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px
+}
+
+.card,
+.service,
+.client-grid div {
+    border: 1px solid #e4eaf2;
+    border-radius: 15px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(12, 48, 91, .06)
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+
+.service b {
+    color: #0875e1
+}
+
+.client-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 35px
+}
+
+.client-grid div {
+    text-align: center;
+    font-weight: 800;
+    color: #6a7890
+}
+
+.lead {
+    font-size: 18px
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.form input,
+.form textarea {
+    border: 1px solid #dce4ef;
+    border-radius: 9px;
+    padding: 15px;
+    font: inherit
+}
+
+.form textarea {
+    min-height: 150px;
+    resize: vertical
+}
+
+.form button,
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.form button,
+.primary {
+    background: #0875e1;
+    color: #fff
+}
+
+.outline {
+    border: 1px solid #0875e1;
+    color: #0875e1
+}
+
+.contact-info {
+    margin-top: 30px;
+    line-height: 2
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px
+}
+
+.icon {
+    font-size: 32px;
+    color: #0875e1
+}
+
+footer {
+    background: #061b3b;
+    color: #dce8f7;
+    padding: 45px 7% 18px;
+    margin-top: 30px
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px
+}
+
+.footer-grid h3 {
+    color: white
+}
+
+.footer-grid p,
+.footer-grid a {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #b9c8dc;
+    display: block
+}
+
+.footer-grid a {
+    position: relative;
+    width: fit-content;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-grid a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0;
+    height: 2px;
+    background: #1688ff;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.footer-grid a:hover {
+    color: #1688ff;
+}
+
+.footer-grid a:hover::after {
+    width: 100%;
+}
+
+
+.copyright {
+    border-top: 1px solid #27405f;
+    margin-top: 25px;
+    padding-top: 15px;
+    font-size: 12px;
+    color: #90a4bd
+}
+
+.hero {
+    min-height: 285px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #061e47;
+    color: white
+}
+
+.hero-content {
+    padding: 45px 7%
+}
+
+.hero h1 {
+    font-size: 39px;
+    line-height: 1.05;
+    margin: 10px 0
+}
+
+.hero h1 span {
+    color: #0091ff
+}
+
+.hero p {
+    max-width: 550px;
+    line-height: 1.5;
+    color: #d4e3f6
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px
+}
+
+.secondary {
+    border: 1px solid #9ab1cf;
+    color: white
+}
+
+.hero-image {
+    overflow: hidden
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 25px 3%;
+    gap: 0
+}
+
+.quick-links a {
+    text-align: center;
+    padding: 15px;
+    border-right: 1px solid #e4e9f0
+}
+
+.quick-links a:last-child {
+    border: 0
+}
+
+.quick-links span {
+    display: block;
+    font-size: 28px;
+    color: #0875e1;
+    background: #eef6ff;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    line-height: 54px;
+    margin: 0 auto 12px
+}
+
+.quick-links b,
+.quick-links small,
+.quick-links strong {
+    display: block
+}
+
+.quick-links b {
+    margin-bottom: 10px
+}
+
+.quick-links small {
+    font-size: 12px;
+    color: #617087;
+    line-height: 1.4;
+    min-height: 50px
+}
+
+.quick-links strong {
+    color: #0875e1;
+    font-size: 12px;
+    margin-top: 10px
+}
+
+.callout {
+    margin: 0 3% 15px;
+    border-radius: 8px;
+    background: linear-gradient(100deg, #061c43, #075bd0);
+    color: #fff;
+    padding: 22px 5%;
+    display: flex;
+    align-items: center;
+    gap: 25px
+}
+
+.callout h2 {
+    margin: 0 0 6px;
+    font-size: 20px
+}
+
+.callout p {
+    margin: 0;
+    line-height: 1.5;
+    color: #d5e4f8
+}
+
+.callout div:nth-child(2) {
+    flex: 1
+}
+
+.rocket {
+    font-size: 32px
+}
+
+.light {
+    background: #fff;
+    color: #0756b8;
+    white-space: nowrap
+}
+
+@media(max-width:900px) {
+    .nav {
+        gap: 10px;
+        font-size: 11px
+    }
+
+    .hero {
+        grid-template-columns: 1fr
+    }
+
+    .hero-image {
+        height: 220px
+    }
+
+    .quick-links {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .quick-links a {
+        border-bottom: 1px solid #e4e9f0
+    }
+
+    .two,
+    .cards,
+    .service-grid,
+    .support-grid {
+        grid-template-columns: 1fr
+    }
+
+    .client-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .callout {
+        flex-wrap: wrap
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .hero h1 {
+        font-size: 32px
+    }
+}
+
+@media(max-width:600px) {
+    header {
+        height: auto;
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 8px
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    .nav a {
+        padding: 5px
+    }
+
+    .quick-links,
+    .client-grid {
+        grid-template-columns: 1fr
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr
+    }
+
+    .page-hero h1 {
+        font-size: 36px
+    }
+}
+
+/* Identidade visual do bloco da marca no rodapé */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    margin: 0 0 12px;
+    line-height: 1.45 !important;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-link {
+    width: 34px !important;
+    height: 34px;
+    border: 1px solid rgba(220, 232, 247, 0.55);
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+}
+
+.social-link:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.social-link svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: #dce8f7;
+    stroke-width: 1.8;
+}
+
+.social-link:nth-child(2) svg {
+    fill: #dce8f7;
+    stroke: none;
+}
+
+@media (max-width: 600px) {
+    .footer-logo {
+        width: 145px;
+    }
+}
