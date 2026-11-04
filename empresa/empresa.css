@@ -1,0 +1,379 @@
+/* Página Empresa */
+.empresa-page {
+    overflow: hidden;
+}
+.empresa-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: linear-gradient(115deg, #061b3b 0%, #073d83 55%, #0875e1 100%);
+}
+.empresa-hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 420px;
+    height: 420px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 50%;
+    right: -100px;
+    top: -190px;
+    box-shadow: 0 0 0 45px rgba(255,255,255,.035), 0 0 0 90px rgba(255,255,255,.025);
+}
+.empresa-hero h1 {
+    max-width: 720px;
+}
+.empresa-intro, .mission-section, .vision-section, .partners-section {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 78px 30px;
+}
+.empresa-intro {
+    display: grid;
+    grid-template-columns: 1.35fr .85fr;
+    gap: 70px;
+    align-items: center;
+}
+.section-kicker {
+    display: inline-block;
+    color: #0875e1;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 13px;
+}
+.intro-copy h2, .section-heading h2, .vision-section h2 {
+    color: #102447;
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1.15;
+    margin: 0 0 22px;
+}
+.intro-copy p, .section-heading > p, .vision-section > p {
+    color: #53627a;
+    font-size: 16px;
+    line-height: 1.85;
+}
+.intro-highlight {
+    padding: 38px;
+    border-radius: 20px;
+    color: white;
+    background: linear-gradient(145deg, #082653, #0875e1);
+    box-shadow: 0 18px 45px rgba(8, 67, 135, .18);
+    position: relative;
+    overflow: hidden;
+}
+.intro-highlight::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 50%;
+    right: -70px;
+    bottom: -90px;
+}
+.highlight-number {
+    display: block;
+    font-size: 58px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+}
+.intro-highlight h3 {
+    font-size: 21px;
+    line-height: 1.35;
+    margin: 0 0 10px;
+}
+.intro-highlight p {
+    color: #d9e9ff;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+.mission-section {
+    padding-top: 30px;
+    padding-bottom: 75px;
+}
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 28px;
+}
+.section-heading h2 {
+    margin-bottom: 12px;
+}
+.mission-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 35px;
+    border: 1px solid #e2eaf4;
+    border-radius: 16px;
+    background: #f7faff;
+}
+.mission-icon {
+    flex: 0 0 58px;
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    color: white;
+    background: #0875e1;
+    font-size: 32px;
+}
+.mission-card p {
+    margin: 0;
+    color: #344762;
+    font-size: 17px;
+    line-height: 1.75;
+}
+.vision-section {
+    max-width: none;
+    padding: 65px max(30px, calc((100% - 1100px) / 2));
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    align-items: center;
+    gap: 60px;
+    background: #f3f7fc;
+}
+.vision-section h2 {
+    margin-bottom: 0;
+}
+.vision-section > p {
+    margin: 0;
+    font-size: 18px;
+}
+.partners-section {
+    padding-top: 78px;
+    padding-bottom: 90px;
+}
+.partners-section .section-heading > p {
+    margin-top: 0;
+}
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+.partner-card {
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+    min-height: 330px;
+    border: 1px solid #e3eaf3;
+    border-radius: 17px;
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(12,48,91,.055);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.partner-card:hover {
+    transform: translateY(-8px);
+    border-color: #b8d7fb;
+    box-shadow: 0 18px 38px rgba(12,48,91,.12);
+}
+.partner-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+.partner-logo-slot {
+    width: 132px;
+    height: 62px;
+    padding: 7px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px dashed #b8cce3;
+    border-radius: 12px;
+    background: #f7faff;
+    color: #7890ad;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .7px;
+}
+.partner-logo-slot img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+.partner-type {
+    color: #6a7890;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+}
+.partner-card h3 {
+    color: #102447;
+    font-size: 20px;
+    margin: 0 0 12px;
+}
+.partner-card p {
+    color: #5a6980;
+    font-size: 14px;
+    line-height: 1.75;
+    margin: 0 0 24px;
+}
+.partner-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    color: #0875e1;
+    font-size: 14px;
+    font-weight: 800;
+    width: fit-content;
+}
+.partner-card a span {
+    transition: transform .25s ease;
+}
+.partner-card a:hover span {
+    transform: translate(3px, -3px);
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (max-width: 850px) {
+    .empresa-intro, .vision-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .partner-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .empresa-intro, .mission-section, .partners-section {
+        padding: 55px 22px;
+    }
+    .vision-section {
+        padding: 55px 22px;
+    }
+    .mission-card {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 25px;
+    }
+    .partner-grid {
+        grid-template-columns: 1fr;
+    }
+    .partner-card {
+        min-height: 0;
+    }
+    .highlight-number {
+        font-size: 48px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .reveal, .partner-card, .partner-card a span {
+        transition: none;
+    }
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* Interações e microanimações em toda a página Empresa */
+.empresa-hero {
+    transition: background-position .6s ease;
+    background-size: 140% 140%;
+    background-position: 0% 50%;
+}
+.empresa-hero:hover {
+    background-position: 100% 50%;
+}
+.intro-copy h2,
+.section-heading h2,
+.vision-section h2 {
+    transition: color .25s ease, transform .25s ease;
+}
+.intro-copy:hover h2,
+.section-heading:hover h2,
+.vision-section:hover h2 {
+    color: #0875e1;
+    transform: translateX(5px);
+}
+.intro-highlight,
+.mission-card,
+.vision-section {
+    transition: transform .35s ease, box-shadow .35s ease, background-color .35s ease;
+}
+.intro-highlight:hover {
+    transform: translateY(-7px) scale(1.01);
+    box-shadow: 0 25px 55px rgba(8, 67, 135, .27);
+}
+.mission-card:hover {
+    transform: translateY(-6px);
+    background: #eef6ff;
+    box-shadow: 0 16px 35px rgba(12, 48, 91, .09);
+}
+.mission-icon {
+    transition: transform .35s ease, border-radius .35s ease;
+}
+.mission-card:hover .mission-icon {
+    transform: rotate(-8deg) scale(1.08);
+    border-radius: 50%;
+}
+.vision-section:hover {
+    background-color: #edf4fc;
+}
+.partner-logo-slot {
+    transition: transform .3s ease, border-color .3s ease, background .3s ease;
+}
+.partner-card:hover .partner-logo-slot {
+    transform: scale(1.06);
+    border-color: #0875e1;
+    background: #edf6ff;
+}
+.partner-card {
+    position: relative;
+    overflow: hidden;
+}
+.partner-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #0875e1, #36b5ff);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .35s ease;
+}
+.partner-card:hover::before {
+    transform: scaleX(1);
+}
+.empresa-page .section-kicker {
+    transition: letter-spacing .3s ease, color .3s ease;
+}
+.empresa-page section:hover > .section-heading .section-kicker,
+.empresa-page section:hover > div > .section-kicker {
+    letter-spacing: 2.8px;
+    color: #005fc4;
+}
+@media (prefers-reduced-motion: reduce) {
+    .empresa-page *,
+    .empresa-page *::before,
+    .empresa-page *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
