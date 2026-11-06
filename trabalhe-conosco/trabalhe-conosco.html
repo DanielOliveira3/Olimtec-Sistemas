@@ -30,6 +30,70 @@
     </div>
 </section>
 
+<div class="container-formulario">
+
+<h1>Dados Pessoais</h1>
+
+
+<form action="enviar.php" method="POST" enctype="multipart/form-data">
+
+    <div class="campo-grupo">
+        <label for="txt_Nome">NOME: </label>
+        <input id="txt_Nome" type="text" name="nome" required>
+    </div>
+
+    <div class="campo-grupo">
+        <label for="txt_Email">E-mail: </label>
+        <input id="txt_Email" type="email" name="email" required>
+    </div>
+
+    <div class="campo-grupo">
+        <label for="txt_Telefone">Telefone: </label>
+        <input type="tel" id="txt_Telefone" 
+               name="telefone"
+               placeholder="(11) 99999-9999"
+               maxlength="15"
+               onkeyup="mascaraTelefone(this)"
+               required>
+    </div>
+
+    <h1>Informações e Curriculo</h1>
+
+    
+    <div class="campo-grupo">
+        <label>Curriculo: </label>
+        <input type="file" id="txt_Curriculo" name="curriculo" accept=".pdf" required onchange="atualizarEstiloPDF(this)">
+        
+        <label id="upload-card" for="txt_Curriculo">
+            <div class="pdf-box">
+                <span class="pdf-tag">PDF</span>
+                <div class="pdf-lines"></div>
+            </div>
+            <div class="upload-text">
+                <strong id="upload-status">Clique para enviar seu PDF</strong>
+                <span id="upload-filename">Apenas arquivos .pdf são aceitos</span>
+            </div>
+        </label>
+    </div>
+
+    
+    <div class="campo-grupo">
+        <label for="txt_Comentario">Mensagem: </label>
+        <textarea id="txt_Comentario" name="comentario" rows="3" placeholder="Escreva uma mensagem ou comentário (Opcional)..."></textarea>
+    </div>
+
+   
+    <div id="preview-container" style="margin: 15px 0 15px 90px; display: none;">
+        <iframe id="pdf-preview" width="100%" height="400px" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
+    </div>
+
+   
+    <div class="campo-grupo">
+        <button type="submit" class="btn-enviar">Enviar Currículo</button>
+    </div>
+
+</form>
+</div>
 <!-- Área reservada para o conteúdo da equipe responsável. -->
 </main>
 <footer>
@@ -60,5 +124,54 @@
 </div>
 <div class="copyright">© 2026 OlimTec Sistemas. Todos os direitos reservados.</div>
 </footer>
+<script>
+    function mascaraTelefone(campo){
+        let valor = campo.value.replace(/\D/g, ""); 
+        
+        if (valor.length > 0) {
+          valor = "(" + valor;
+        }
+        if (valor.length > 3) {
+          valor = valor.slice(0, 3) + ") " + valor.slice(3);
+        }
+        if (valor.length > 10) {
+          valor = valor.slice(0, 10) + "-" + valor.slice(10, 14);
+        } else if (valor.length > 6) {
+          valor = valor.slice(0, 9) + "-" + valor.slice(9);
+        }
+        
+        campo.value = valor;
+      }
+      
+        function atualizarEstiloPDF(input) {
+            const uploadStatus = document.getElementById('upload-status');
+            const uploadFilename = document.getElementById('upload-filename');
+            const previewContainer = document.getElementById('preview-container');
+            const pdfPreview = document.getElementById('pdf-preview');
+            
+            
+            if (input.files && input.files[0]) {
+                const arquivo = input.files[0];
+                
+               
+                uploadStatus.innerText = "Arquivo selecionado!";
+                uploadFilename.innerText = arquivo.name;
+                uploadFilename.style.color = "#28a745"; 
 
-</body></html>
+                
+                if (arquivo.type === "application/pdf") {
+                    const url = URL.createObjectURL(arquivo);
+                    pdfPreview.src = url;
+                    previewContainer.style.display = "block"; 
+                }
+            } else {
+                
+                uploadStatus.innerText = "Clique para enviar seu PDF";
+                uploadFilename.innerText = "Apenas arquivos .pdf são aceitos";
+                uploadFilename.style.color = "#6c757d";
+                previewContainer.style.display = "none"; 
+            }
+        }
+</script>
+</body>
+</html>
