@@ -1,0 +1,170 @@
+
+.container-formulario {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+.container-formulario h1 {
+  text-align: left;
+  margin-top: 45px;
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #0b2545; 
+  font-weight: 700;
+  border-bottom: 2px solid #eef2f7;
+  padding-bottom: 8px;
+}
+
+
+.campo-grupo {
+  display: flex !important;
+  align-items: flex-start !important; 
+  margin-bottom: 20px !important;
+}
+
+
+.campo-grupo label {
+  width: 110px !important; 
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 14px;
+  margin-top: 8px; 
+}
+
+.campo-grupo input[type="text"],
+.campo-grupo input[type="email"],
+.campo-grupo input[type="tel"],
+.campo-grupo textarea {
+  flex: 1;
+  max-width: 500px !important;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #334155;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+
+.campo-grupo input:focus,
+.campo-grupo textarea:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
+  background-color: #fff;
+}
+
+.campo-grupo textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+
+#txt_Curriculo {
+  display: none !important;
+}
+
+#upload-card {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px;
+  background-color: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  max-width: 500px !important;
+  flex: 1;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+#upload-card:hover {
+  background-color: #f1f5f9;
+  border-color: #0066cc;
+}
+
+
+.pdf-box {
+  width: 44px;
+  height: 54px;
+  background-color: #fef2f2;
+  border: 2px solid #fee2e2;
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 6px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.pdf-tag {
+  background-color: #ef4444;
+  color: white;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 2px 4px;
+  border-radius: 3px;
+  position: absolute;
+  top: 14px;
+  letter-spacing: 0.5px;
+}
+
+.pdf-lines {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 16px;
+  height: 2px;
+  background-color: #fca5a5;
+  box-shadow: 0 4px 0 #fca5a5, 0 8px 0 #fca5a5;
+}
+
+.upload-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.upload-text strong {
+  font-size: 14px;
+  color: #334155;
+  text-transform: none !important;
+}
+
+.upload-text span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+
+.btn-enviar {
+  margin-left: 110px; 
+  padding: 12px 32px;
+  background-color: #0066cc; 
+  color: white;
+  border: none;
+  border-radius: 25px; 
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 102, 204, 0.2);
+}
+
+.btn-enviar:hover {
+  background-color: #004da3;
+  transform: translateY(-1px); 
+  box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3);
+}
+
+.btn-enviar:active {
+  transform: translateY(0);
+}
