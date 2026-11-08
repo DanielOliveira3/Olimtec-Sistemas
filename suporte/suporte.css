@@ -1,0 +1,473 @@
+/* ==========================================
+   FOOTER OLIMTEC SISTEMAS
+========================================== */
+
+.ol-footer {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        #f8fbff 0%,
+        #edf4ff 50%,
+        #ffffff 100%
+    );
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #10264d;
+    isolation: isolate;
+}
+
+/* DECORAÇÕES DO FUNDO */
+
+.footer-decoration {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.footer-decoration-top {
+    top: -120px;
+    left: -100px;
+    width: 330px;
+    height: 230px;
+    background: linear-gradient(
+        135deg,
+        #0065e9,
+        #20a9ff
+    );
+    border-radius: 0 0 90% 0;
+    transform: rotate(-8deg);
+    opacity: 0.9;
+}
+
+.footer-decoration-bottom {
+    right: -120px;
+    bottom: 70px;
+    width: 350px;
+    height: 170px;
+    background: linear-gradient(
+        135deg,
+        #0875ed,
+        #003d9c
+    );
+    border-radius: 90% 0 0 0;
+    opacity: 0.12;
+}
+
+/* CONTAINER */
+
+.ol-footer-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 75px 55px 65px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+}
+
+/* SEÇÕES */
+
+.footer-section {
+    min-width: 0;
+    padding: 15px 20px;
+}
+
+/* DIVISÃO ENTRE AS COLUNAS */
+
+.useful-section {
+    border-right: 2px solid #d5e5ff;
+    padding-right: 50px;
+}
+
+/* CABEÇALHOS */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 38px;
+}
+
+.heading-icon {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 27px;
+
+    background: linear-gradient(
+        145deg,
+        #078aff,
+        #003eaa
+    );
+
+    color: #ffffff;
+
+    box-shadow: 0 12px 25px rgba(0, 91, 210, 0.18);
+}
+
+.heading-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    font-weight: 750;
+    letter-spacing: -1px;
+    color: #10264d;
+    margin: 0 0 9px;
+}
+
+.section-heading p {
+    color: #526b91;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* LINHA AZUL NO TÍTULO */
+
+.section-heading h2::after {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 5px;
+    background: linear-gradient(
+        90deg,
+        #0069ec,
+        #19a5ff
+    );
+    border-radius: 10px;
+    margin-top: 13px;
+}
+
+/* LINKS ÚTEIS */
+
+.useful-links {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.useful-link {
+    min-height: 78px;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: rgba(255,255,255,0.92);
+    border: 1px solid #e8effb;
+    border-radius: 23px;
+
+    text-decoration: none;
+    color: #10264d;
+
+    box-shadow: 0 7px 18px rgba(35, 91, 165, 0.07);
+
+    transition: all 0.3s ease;
+}
+
+.link-icon {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-right: 1px solid #e5edfa;
+    padding-right: 15px;
+
+    color: #0875ed;
+}
+
+.link-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.link-name {
+    font-size: 17px;
+    font-weight: 600;
+    flex: 1;
+}
+
+.link-arrow {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #0875ed;
+    color: #ffffff;
+
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+
+.useful-link:hover {
+    transform: translateY(-3px);
+    border-color: #83baff;
+    box-shadow: 0 12px 25px rgba(0, 91, 210, 0.13);
+}
+
+.useful-link:hover .link-arrow {
+    transform: translateX(5px);
+    background: #003eaa;
+}
+
+/* ÁREA DE SUPORTE */
+
+.support-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.support-item {
+    min-height: 62px;
+    padding: 8px 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    background: rgba(231, 241, 255, 0.68);
+    border: 1px solid transparent;
+    border-radius: 18px;
+
+    color: #10264d;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.support-item:hover {
+    background: #ffffff;
+    border-color: #c7e0ff;
+    transform: translateX(4px);
+}
+
+.support-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        145deg,
+        #d8ebff,
+        #c1dcff
+    );
+
+    color: #0875ed;
+    border-radius: 50%;
+}
+
+.support-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+/* FAIXA INFERIOR */
+
+.footer-bottom {
+    min-height: 105px;
+    padding: 20px 7%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+
+    background: linear-gradient(
+        110deg,
+        #061735,
+        #0b2450,
+        #061735
+    );
+
+    border-top: 3px solid #0875ed;
+    color: #ffffff;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #e4ebf7;
+}
+
+.footer-bottom strong {
+    color: #ffffff;
+}
+
+.bottom-divider {
+    width: 2px;
+    height: 48px;
+    background: #8ebdff;
+}
+
+.footer-bottom .footer-slogan {
+    font-style: italic;
+    color: #d6e5ff;
+}
+
+/* ==========================================
+   RESPONSIVIDADE - TABLETS
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .ol-footer-container {
+        padding: 60px 35px;
+        gap: 30px;
+    }
+
+    .section-heading {
+        gap: 15px;
+    }
+
+    .heading-icon {
+        width: 75px;
+        height: 75px;
+        border-radius: 20px;
+    }
+
+    .heading-icon svg {
+        width: 38px;
+        height: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .useful-section {
+        padding-right: 30px;
+    }
+
+    .link-name,
+    .support-item {
+        font-size: 14px;
+    }
+}
+
+/* ==========================================
+   RESPONSIVIDADE - CELULARES
+========================================== */
+
+@media (max-width: 650px) {
+
+    .ol-footer-container {
+        grid-template-columns: 1fr;
+        padding: 45px 20px;
+        gap: 35px;
+    }
+
+    .footer-section {
+        padding: 0;
+    }
+
+    .useful-section {
+        border-right: none;
+        border-bottom: 2px solid #d5e5ff;
+        padding: 0 0 35px;
+    }
+
+    .section-heading {
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .heading-icon {
+        width: 65px;
+        height: 65px;
+        border-radius: 17px;
+    }
+
+    .heading-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .section-heading p {
+        font-size: 12px;
+    }
+
+    .useful-link {
+        min-height: 65px;
+        padding: 0 12px;
+        gap: 12px;
+        border-radius: 16px;
+    }
+
+    .link-icon {
+        width: 48px;
+        height: 48px;
+        padding-right: 10px;
+    }
+
+    .link-icon svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .link-name {
+        font-size: 14px;
+    }
+
+    .link-arrow {
+        width: 29px;
+        height: 29px;
+        font-size: 18px;
+    }
+
+    .support-item {
+        min-height: 58px;
+        padding: 7px 10px;
+        gap: 12px;
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    .support-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 25px 15px;
+    }
+
+    .bottom-divider {
+        width: 65px;
+        height: 2px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}

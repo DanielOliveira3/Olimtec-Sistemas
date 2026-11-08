@@ -29,6 +29,341 @@
         <p>Vamos conversar sobre as necessidades da sua empresa.</p>
     </div>
 </section>
+ 
+
+ 
+    <!-- eu a baixo -->
+
+    <!-- FORMULÁRIO -->
+    <main class="container">
+
+        <section class="contact-card">
+
+            <div class="section-line"></div>
+
+            <h2>Fale com a nossa equipe</h2>
+
+            <p class="description">
+                Se você é cliente ou deseja adquirir nossos serviços ou produtos,
+                preencha os campos abaixo.
+            </p>
+
+
+            <form action="#" method="POST">
+
+                <div class="form-grid">
+
+                    <!-- COLUNA ESQUERDA -->
+                    <div class="form-column">
+
+                        <div class="form-group">
+                            <label>Empresa:</label>
+                            <input type="text" name="empresa"
+                                placeholder="Nome da empresa">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nome:</label>
+                            <input type="text" name="nome"
+                                placeholder="Digite seu nome" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>E-mail:</label>
+                            <input type="email" name="email"
+                                placeholder="seuemail@exemplo.com" required>
+                        </div>
+
+                        <!-- TELEFONE COM DDD -->
+                        <div class="form-group">
+                            <label>Telefone:</label>
+
+                            <div class="phone-fields">
+
+                                <input
+                                    type="tel"
+                                    name="ddd"
+                                    placeholder="DDD"
+                                    maxlength="2"
+                                    class="ddd"
+                                    inputmode="numeric"
+                                    required
+                                >
+
+                                <input
+                                    type="tel"
+                                    name="telefone"
+                                    placeholder="99999-9999"
+                                    maxlength="10"
+                                    class="phone-number"
+                                    inputmode="numeric"
+                                    required
+                                >
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- COLUNA DIREITA -->
+                    <div class="form-column">
+
+                        <!-- CEP -->
+                        <div class="form-group">
+                            <label>CEP:</label>
+
+                            <input
+                                type="text"
+                                name="cep"
+                                id="cep"
+                                placeholder="00000-000"
+                                maxlength="9"
+                                inputmode="numeric"
+                                required
+                            >
+
+                            <small id="cep-status"></small>
+                        </div>
+
+
+                        <!-- ENDEREÇO -->
+                        <div class="form-group">
+                            <label>Endereço:</label>
+
+                            <input
+                                type="text"
+                                name="endereco"
+                                id="endereco"
+                                placeholder="Rua, nº - Digite seu endereço"
+                            >
+                        </div>
+
+
+                        <!-- BAIRRO -->
+                        <div class="form-group">
+                            <label>Bairro:</label>
+
+                            <input
+                                type="text"
+                                name="bairro"
+                                id="bairro"
+                                placeholder="Seu bairro"
+                            >
+                        </div>
+
+
+                        <!-- CIDADE -->
+                        <div class="form-group">
+                            <label>Cidade:</label>
+
+                            <input
+                                type="text"
+                                name="cidade"
+                                id="cidade"
+                                placeholder="Sua cidade"
+                            >
+                        </div>
+
+
+                        <!-- ESTADO -->
+                        <div class="form-group">
+                            <label>Estado:</label>
+
+                            <select name="estado" id="estado">
+
+                                <option value="">Selecione</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+
+                            </select>
+                        </div>
+
+
+                        <!-- ASSUNTO -->
+                        <div class="form-group">
+                            <label>Assunto:</label>
+
+                            <select name="assunto">
+                                <option value="">Qual o motivo do contato?</option>
+                                <option>Informações sobre serviços</option>
+                                <option>Suporte técnico</option>
+                                <option>Orçamento</option>
+                                <option>Comercial</option>
+                                <option>Outros assuntos</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MENSAGEM -->
+                <div class="form-group message-group">
+
+                    <label>Mensagem:</label>
+
+                    <textarea
+                        name="mensagem"
+                        placeholder="Escreva sua mensagem..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- COMO CONHECEU -->
+                <div class="origin-group">
+
+                    <label>Como conheceu a OlimTec?</label>
+
+                    <select name="origem">
+                        <option value="">Selecione uma opção</option>
+                        <option>Google</option>
+                        <option>Instagram</option>
+                        <option>Facebook</option>
+                        <option>Indicação</option>
+                        <option>Outros</option>
+                    </select>
+
+                </div>
+
+
+                <!-- BOTÕES -->
+                <div class="buttons">
+
+                    <button type="submit" class="btn-submit">
+                        ➤ ENVIAR MENSAGEM
+                    </button>
+
+                    <a href="../index.html" class="btn-back">
+                        ⌂ Voltar para o site
+                    </a>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+   
+    <!-- BUSCA AUTOMÁTICA DO CEP -->
+    <script>
+
+        const campoCep = document.getElementById("cep");
+        const statusCep = document.getElementById("cep-status");
+
+        campoCep.addEventListener("input", function () {
+
+            let cep = this.value.replace(/\D/g, "");
+
+            if (cep.length > 8) {
+                cep = cep.substring(0, 8);
+            }
+
+            this.value = cep.replace(
+                /^(\d{5})(\d{3})$/,
+                "$1-$2"
+            );
+
+            if (cep.length === 8) {
+                buscarCEP(cep);
+            } else {
+                statusCep.textContent = "";
+            }
+
+        });
+
+
+        async function buscarCEP(cep) {
+
+            statusCep.textContent = "Buscando endereço...";
+
+            try {
+
+                const resposta = await fetch(
+                    `https://viacep.com.br/ws/${cep}/json/`
+                );
+
+                if (!resposta.ok) {
+                    throw new Error("Erro na consulta");
+                }
+
+                const dados = await resposta.json();
+
+                if (dados.erro) {
+
+                    statusCep.textContent = "CEP não encontrado.";
+
+                    document.getElementById("endereco").value = "";
+                    document.getElementById("bairro").value = "";
+                    document.getElementById("cidade").value = "";
+                    document.getElementById("estado").value = "";
+
+                    return;
+                }
+
+                // PREENCHIMENTO AUTOMÁTICO
+                document.getElementById("endereco").value =
+                    dados.logradouro || "";
+
+                document.getElementById("bairro").value =
+                    dados.bairro || "";
+
+                document.getElementById("cidade").value =
+                    dados.localidade || "";
+
+                document.getElementById("estado").value =
+                    dados.uf || "";
+
+                statusCep.textContent = "Endereço encontrado com sucesso!";
+
+            } catch (erro) {
+
+                statusCep.textContent =
+                    "Não foi possível consultar o CEP. Tente novamente.";
+
+                console.error(erro);
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
+<!-- eu a cima -->
+
 
 <!-- Área reservada para o conteúdo da equipe responsável. -->
 </main>
@@ -61,3 +396,4 @@
 <div class="copyright">© 2026 OlimTec Sistemas. Todos os direitos reservados.</div>
 </footer>
 </body></html>
+
