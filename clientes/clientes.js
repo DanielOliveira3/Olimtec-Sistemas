@@ -1,4 +1,3 @@
-// Anima os blocos da página conforme entram na área visível.
 document.addEventListener("DOMContentLoaded", () => {
     const elementos = document.querySelectorAll(".reveal");
 

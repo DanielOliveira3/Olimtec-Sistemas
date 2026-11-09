@@ -1,0 +1,249 @@
+/* Páginas individuais dos softwares contábeis */
+.accounting-product-page {overflow:hidden;}
+.accounting-product-hero {
+ position:relative;isolation:isolate;overflow:hidden;
+ background:linear-gradient(110deg,#061b3b,#0756b8,#0875e1);
+ background-size:160% 160%;transition:background-position .6s ease;
+}
+.accounting-product-hero:hover {background-position:100% 50%;}
+.accounting-product-hero::after {
+ content:"";position:absolute;z-index:-1;width:360px;height:360px;right:-90px;top:-180px;
+ border:1px solid rgba(255,255,255,.17);border-radius:50%;
+ box-shadow:0 0 0 40px rgba(255,255,255,.035),0 0 0 80px rgba(255,255,255,.025);
+}
+.accounting-product-hero h1,.accounting-product-hero p {transition:transform .35s ease,text-shadow .35s ease;}
+.accounting-product-hero:hover h1 {transform:translateX(6px);text-shadow:0 5px 22px rgba(0,0,0,.18);}
+.accounting-product-hero:hover p {transform:translateX(4px);}
+.product-intro {
+ max-width:1080px;margin:0 auto;padding:65px 30px 45px;
+ display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center;
+}
+.product-intro-copy {padding:24px;border-radius:16px;transition:background .3s ease,transform .3s ease,box-shadow .3s ease;}
+.product-intro-copy:hover {background:#f8fbff;transform:translateY(-4px);box-shadow:0 14px 32px rgba(12,48,91,.07);}
+.product-intro-copy h2 {font-size:clamp(24px,2.7vw,33px);color:#102447;margin:0 0 15px;transition:color .3s ease,transform .3s ease;}
+.product-intro-copy:hover h2 {color:#0875e1;transform:translateX(4px);}
+.product-intro-copy strong {display:block;color:#263f60;line-height:1.65;margin-bottom:8px;}
+.product-intro-copy p {color:#53627a;line-height:1.8;margin:0;}
+.product-image-slot {
+ min-height:260px;display:grid;place-items:center;position:relative;overflow:hidden;
+ border:1px dashed #aac4e2;border-radius:17px;
+ background:linear-gradient(135deg,#fbfdff,#eaf3fd);
+ transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+.product-image-slot:hover {transform:translateY(-5px);border-color:#0875e1;box-shadow:0 18px 38px rgba(12,48,91,.12);}
+.product-image-slot img {position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:14px;transition:transform .4s ease;}
+.product-image-slot:hover img {transform:scale(1.05);}
+.product-image-slot span {color:#7890ad;font-size:11px;font-weight:800;letter-spacing:1px;text-align:center;padding:20px;}
+.product-detail-note {
+ max-width:1080px;margin:0 auto 55px;padding:30px;border-radius:16px;
+ background:#f4f8fd;border:1px solid #e2edf8;transition:transform .3s ease,box-shadow .3s ease;
+}
+.product-detail-note:hover {transform:translateY(-4px);box-shadow:0 14px 30px rgba(12,48,91,.08);}
+.product-detail-note h2 {color:#102447;margin:0 0 10px;font-size:22px;}
+.product-detail-note p {color:#53627a;line-height:1.8;margin:0;}
+.product-return {max-width:1080px;margin:0 auto;padding:0 30px 65px;}
+.product-return a {display:inline-flex;padding:12px 18px;border-radius:8px;color:white;background:#0875e1;text-decoration:none;font-weight:700;transition:transform .25s ease,background .25s ease,box-shadow .25s ease;}
+.product-return a:hover {transform:translateY(-3px);background:#0756b8;box-shadow:0 10px 22px rgba(8,117,225,.2);}
+@media(max-width:750px){.product-intro{grid-template-columns:1fr;padding:50px 20px 35px;gap:22px;}.product-detail-note{margin:0 20px 40px;padding:24px;}.product-return{padding:0 20px 55px;}}
+@media(prefers-reduced-motion:reduce){.accounting-product-page *, .accounting-product-page *::before,.accounting-product-page *::after{transition-duration:.01ms!important;animation-duration:.01ms!important;}}
+
+
+/* Conteúdo completo e organizado das páginas contábeis */
+.accounting-details {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 28px 30px 65px;
+}
+.accounting-details-heading {
+    max-width: 760px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+.accounting-details-heading h2 {
+    margin: 0 0 10px;
+    color: #102447;
+    font-size: clamp(25px, 3vw, 34px);
+    transition: color .3s ease, transform .3s ease;
+}
+.accounting-details-heading:hover h2 {
+    color: #0875e1;
+    transform: translateY(-3px);
+}
+.accounting-details-heading p {
+    color: #64748b;
+    line-height: 1.7;
+    margin: 0;
+}
+.accounting-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+.accounting-detail-card {
+    position: relative;
+    display: flex;
+    gap: 17px;
+    padding: 25px;
+    border: 1px solid #e1eaf4;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 7px 22px rgba(12,48,91,.045);
+    overflow: hidden;
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+.accounting-detail-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg,#0875e1,#56baff);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .35s ease;
+}
+.accounting-detail-card:hover {
+    transform: translateY(-5px);
+    border-color: #b5d5f5;
+    box-shadow: 0 17px 34px rgba(12,48,91,.10);
+}
+.accounting-detail-card:hover::before { transform: scaleY(1); }
+.detail-index {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    color: #0875e1;
+    background: #eaf4ff;
+    font-size: 12px;
+    font-weight: 800;
+    transition: transform .35s ease, color .35s ease, background .35s ease;
+}
+.accounting-detail-card:hover .detail-index {
+    transform: rotate(-7deg) scale(1.08);
+    color: #fff;
+    background: #0875e1;
+}
+.detail-card-content { min-width: 0; }
+.detail-card-content h2 {
+    margin: 2px 0 13px;
+    color: #102447;
+    font-size: 19px;
+    line-height: 1.35;
+    transition: color .3s ease, transform .3s ease;
+}
+.accounting-detail-card:hover h2 {
+    color: #0875e1;
+    transform: translateX(3px);
+}
+.detail-card-content p {
+    margin: 0 0 12px;
+    color: #53627a;
+    font-size: 14px;
+    line-height: 1.8;
+}
+.accounting-feature-list {
+    display: grid;
+    gap: 9px;
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+}
+.accounting-feature-list li {
+    position: relative;
+    padding-left: 21px;
+    color: #53627a;
+    font-size: 13.5px;
+    line-height: 1.65;
+    transition: color .25s ease, transform .25s ease;
+}
+.accounting-feature-list li::before {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: .62em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #1688e8;
+    box-shadow: 0 0 0 4px #e9f4ff;
+}
+.accounting-feature-list li:hover {
+    color: #123d70;
+    transform: translateX(4px);
+}
+.evaluation-callout {
+    max-width: 1060px;
+    margin: 0 auto 55px;
+    padding: 30px 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border-radius: 17px;
+    color: #fff;
+    background: linear-gradient(110deg,#061b3b,#0756b8,#0875e1);
+    box-shadow: 0 15px 35px rgba(8,67,135,.14);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+.evaluation-callout:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 42px rgba(8,67,135,.22);
+}
+.evaluation-callout .section-kicker { color: #b9dcff; }
+.evaluation-callout h2 { margin: 0 0 8px; font-size: 23px; }
+.evaluation-callout p { max-width: 690px; margin: 0; color: #e0edff; line-height: 1.7; font-size: 14px; }
+.evaluation-callout a {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 17px;
+    border-radius: 8px;
+    color: #0756b8;
+    background: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.evaluation-callout a:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,.15); }
+.evaluation-callout a span { transition: transform .25s ease; }
+.evaluation-callout a:hover span { transform: translateX(4px); }
+.accounting-product-page .reveal {
+    opacity:  0;
+    transform: translateY(22px);
+    transition: opacity .65s ease, transform .65s ease;
+}
+.accounting-product-page .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media(max-width:850px) {
+    .accounting-detail-grid { grid-template-columns: 1fr; }
+    .evaluation-callout { margin-left: 20px; margin-right: 20px; }
+}
+@media(max-width:650px) {
+    .accounting-details { padding: 25px 18px 48px; }
+    .accounting-detail-card { padding: 20px 17px; gap: 12px; }
+    .detail-index { flex-basis: 32px; width: 32px; height: 32px; }
+    .evaluation-callout { margin-bottom: 40px; padding: 25px 22px; flex-direction: column; align-items: flex-start; }
+    .evaluation-callout h2 { font-size: 20px; }
+}
+@media(prefers-reduced-motion:reduce) {
+    .accounting-product-page .reveal { opacity: 1; transform: none; }
+}
+
+
+/* Tipografia padronizada dos títulos solicitados */
+.accounting-title-kicker {
+    color: #0875e1;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
