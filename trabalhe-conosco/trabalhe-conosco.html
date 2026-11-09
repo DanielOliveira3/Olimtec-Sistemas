@@ -7,8 +7,9 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="stylesheet" href="/index.css">
 <link rel="stylesheet" href="./trabalhe-conosco.css">
+<script src="./trabalhe-conosco.js" defer></script>
 </head>
-<body>
+<body class="trabalhe-page">
 <header>
 <a href="../index.html"><img class="logo" src="../assets/logo.png" alt="OlimTec Sistemas"></a>
 <nav class="nav">
@@ -30,7 +31,72 @@
     </div>
 </section>
 
-<!-- Área reservada para o conteúdo da equipe responsável. -->
+<div class="container-formulario">
+
+<form action="enviar.php" method="POST" enctype="multipart/form-data">
+
+    <div class="form-section-title">
+        <h1>Dados Pessoais</h1>
+    </div>
+
+    <div class="campo-grupo">
+        <label for="txt_Nome">NOME: </label>
+        <input id="txt_Nome" type="text" name="nome" required>
+    </div>
+
+    <div class="campo-grupo">
+        <label for="txt_Email">E-mail: </label>
+        <input id="txt_Email" type="email" name="email" required>
+    </div>
+
+    <div class="campo-grupo">
+        <label for="txt_Telefone">Telefone: </label>
+        <input type="tel" id="txt_Telefone" 
+               name="telefone"
+               placeholder="(11) 99999-9999"
+               maxlength="15"
+               onkeyup="mascaraTelefone(this)"
+               required>
+    </div>
+
+    <h1>Informações e Curriculo</h1>
+
+    
+    <div class="campo-grupo">
+        <label>Curriculo: </label>
+        <input type="file" id="txt_Curriculo" name="curriculo" accept=".pdf" required onchange="atualizarEstiloPDF(this)">
+        
+        <label id="upload-card" for="txt_Curriculo">
+            <div class="pdf-box">
+                <span class="pdf-tag">PDF</span>
+                <div class="pdf-lines"></div>
+            </div>
+            <div class="upload-text">
+                <strong id="upload-status">Clique para enviar seu PDF</strong>
+                <span id="upload-filename">Apenas arquivos .pdf são aceitos</span>
+            </div>
+        </label>
+    </div>
+
+    
+    <div class="campo-grupo">
+        <label for="txt_Comentario">Mensagem: </label>
+        <textarea id="txt_Comentario" name="comentario" rows="3" placeholder="Escreva uma mensagem ou comentário (Opcional)..."></textarea>
+    </div>
+
+   
+    <div id="preview-container" style="margin: 15px 0 15px 90px; display: none;">
+        <iframe id="pdf-preview" width="100%" height="400px" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
+    </div>
+
+   
+    <div class="campo-grupo">
+        <button type="submit" class="btn-enviar">Enviar Currículo</button>
+    </div>
+
+</form>
+</div>
+
 </main>
 <footer>
 <div class="footer-grid">
@@ -60,4 +126,6 @@
 </div>
 <div class="copyright">© 2026 OlimTec Sistemas. Todos os direitos reservados.</div>
 </footer>
-</body></html>
+
+</body>
+</html>
