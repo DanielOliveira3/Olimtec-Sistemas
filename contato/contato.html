@@ -7,6 +7,7 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="stylesheet" href="/index.css">
 <link rel="stylesheet" href="./contato.css">
+<script src="./contato.js" defer></script>
 </head>
 <body>
 <header>
@@ -18,7 +19,11 @@
 <a class="" href="../trabalhe-conosco/trabalhe-conosco.html">Trabalhe Conosco</a>
 <a class="" href="../suporte/suporte.html">Suporte</a>
 <a class="active" href="./contato.html">Contato</a>
-<a class="contact-btn" href="./contato.html">◯ Fale Conosco</a>
+<a class="contact-btn"
+   href="https://wa.me/5517991576056?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Olimtec."
+   target="_blank"
+   rel="noopener noreferrer">Fale Conosco <span>→</span></a>
+
 </nav>
 </header>
 <main>
@@ -29,8 +34,262 @@
         <p>Vamos conversar sobre as necessidades da sua empresa.</p>
     </div>
 </section>
+ 
 
-<!-- Área reservada para o conteúdo da equipe responsável. -->
+ 
+
+
+    <!-- FORMULÁRIO -->
+    <main class="container">
+
+        <section class="contact-card">
+
+            <div class="section-line"></div>
+
+            <h2>Fale com a nossa equipe</h2>
+
+            <p class="description">
+                Se você é cliente ou deseja adquirir nossos serviços ou produtos,
+                preencha os campos abaixo.
+            </p>
+
+
+            <form action="#" method="POST">
+
+                <div class="form-grid">
+
+                    <!-- COLUNA ESQUERDA -->
+                    <div class="form-column">
+
+                        <div class="form-group">
+                            <label>Empresa:</label>
+                            <input type="text" name="empresa"
+                                placeholder="Nome da empresa">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nome:</label>
+                            <input type="text" name="nome"
+                                placeholder="Digite seu nome" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>E-mail:</label>
+                            <input type="email" name="email"
+                                placeholder="seuemail@exemplo.com" required>
+                        </div>
+
+                        <!-- TELEFONE COM DDD -->
+                        <div class="form-group">
+                            <label>Telefone:</label>
+
+                            <div class="phone-fields">
+
+                                <input
+                                    type="tel"
+                                    name="ddd"
+                                    placeholder="DDD"
+                                    maxlength="2"
+                                    class="ddd"
+                                    inputmode="numeric"
+                                    required
+                                >
+
+                                <input
+                                    type="tel"
+                                    name="telefone"
+                                    placeholder="99999-9999"
+                                    maxlength="10"
+                                    class="phone-number"
+                                    inputmode="numeric"
+                                    required
+                                >
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- COLUNA DIREITA -->
+                    <div class="form-column">
+
+                        <!-- CEP -->
+                        <div class="form-group">
+                            <label>CEP:</label>
+
+                            <input
+                                type="text"
+                                name="cep"
+                                id="cep"
+                                placeholder="00000-000"
+                                maxlength="9"
+                                inputmode="numeric"
+                                required
+                            >
+
+                            <small id="cep-status"></small>
+                        </div>
+
+
+                        <!-- ENDEREÇO -->
+                        <div class="form-group">
+                            <label>Endereço:</label>
+
+                            <input
+                                type="text"
+                                name="endereco"
+                                id="endereco"
+                                placeholder="Rua, nº - Digite seu endereço"
+                            >
+                        </div>
+
+
+                        <!-- BAIRRO -->
+                        <div class="form-group">
+                            <label>Bairro:</label>
+
+                            <input
+                                type="text"
+                                name="bairro"
+                                id="bairro"
+                                placeholder="Seu bairro"
+                            >
+                        </div>
+
+
+                        <!-- CIDADE -->
+                        <div class="form-group">
+                            <label>Cidade:</label>
+
+                            <input
+                                type="text"
+                                name="cidade"
+                                id="cidade"
+                                placeholder="Sua cidade"
+                            >
+                        </div>
+
+
+                        <!-- ESTADO -->
+                        <div class="form-group">
+                            <label>Estado:</label>
+
+                            <select name="estado" id="estado">
+
+                                <option value="">Selecione</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+
+                            </select>
+                        </div>
+
+
+                        <!-- ASSUNTO -->
+                        <div class="form-group">
+                            <label>Assunto:</label>
+
+                            <select name="assunto">
+                                <option value="">Qual o motivo do contato?</option>
+                                <option>Informações sobre serviços</option>
+                                <option>Suporte técnico</option>
+                                <option>Orçamento</option>
+                                <option>Comercial</option>
+                                <option>Outros assuntos</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MENSAGEM -->
+                <div class="form-group message-group">
+
+                    <label>Mensagem:</label>
+
+                    <textarea
+                        name="mensagem"
+                        placeholder="Escreva sua mensagem..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- COMO CONHECEU -->
+                <div class="origin-group">
+
+                    <label>Como conheceu a OlimTec?</label>
+
+                    <select name="origem">
+                        <option value="">Selecione uma opção</option>
+                        <option>Google</option>
+                        <option>Instagram</option>
+                        <option>Facebook</option>
+                        <option>Indicação</option>
+                        <option>Outros</option>
+                    </select>
+
+                </div>
+
+
+                <!-- BOTÕES -->
+                <div class="buttons">
+
+                    <button type="submit" class="btn-submit">
+                        ➤ ENVIAR MENSAGEM
+                    </button>
+
+                    <a href="../index.html" class="btn-back">
+                        ⌂ Voltar para o site
+                    </a>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+   
+
+
+
+</body>
+</html>
+
+
+
+
 </main>
 <footer>
 <div class="footer-grid">
@@ -56,8 +315,9 @@
 </div>
 
 <div><h3>Navegação</h3><a href="../empresa/empresa.html">Empresa</a><a href="../solucao/solucao.html">Nossa Solução</a><a href="../clientes/clientes.html">Clientes</a><a href="../trabalhe-conosco/trabalhe-conosco.html">Trabalhe Conosco</a><a href="../suporte/suporte.html">Suporte</a><a href="./contato.html">Contato</a></div>
-<div><h3>Contato</h3><p>☎ 17 99157-6056</p><p>✉ murilo@olimtec.com.br <br> ✉ jose_eduardo@olimtec.com.br</p><p>⌖ Olímpia - SP</p><p>◷ Seg - Sex: 08h às 18h</p></div>
+<div><h3>Contato</h3><p>☎ 17 99157-6056</p><p>✉ murilo@olimtec.com.br</p><p>✉ jose_eduardo@olimtec.com.br</p><p>⌖ Olímpia - SP</p><p>◷ Seg - Sex: 08h às 18h</p></div>
 </div>
 <div class="copyright">© 2026 OlimTec Sistemas. Todos os direitos reservados.</div>
 </footer>
 </body></html>
+

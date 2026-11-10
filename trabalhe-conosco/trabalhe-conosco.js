@@ -77,3 +77,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     elementos.forEach((elemento) => observador.observe(elemento));
 });
+
+// Mantém o telefone enviado pelo formulário no mesmo campo usado anteriormente,
+// enquanto o DDD e o número ficam visualmente separados como no formulário de Contato.
+function sincronizarTelefone() {
+    const ddd = document.getElementById('txt_DDD');
+    const telefone = document.getElementById('txt_Telefone_Visual');
+    const oculto = document.getElementById('txt_Telefone');
+    if (!ddd || !telefone || !oculto) return;
+
+    const d = ddd.value.replace(/\D/g, '').slice(0, 2);
+    const n = telefone.value.replace(/\D/g, '').slice(0, 10);
+    oculto.value = d && n ? `(${d}) ${n.slice(0,5)}${n.length > 5 ? '-' + n.slice(5) : ''}` : (d ? `(${d})` : n);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const ddd = document.getElementById('txt_DDD');
+    const telefone = document.getElementById('txt_Telefone_Visual');
+    if (!ddd || !telefone) return;
+    ddd.addEventListener('input', sincronizarTelefone);
+    telefone.addEventListener('input', sincronizarTelefone);
+});

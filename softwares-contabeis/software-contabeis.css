@@ -185,3 +185,159 @@
         max-width: 320px;
     }
 }
+
+/* =====================================================
+   PADRAO UNICO — AREA NOSSA SOLUCAO / CONTABIL
+   ===================================================== */
+.contabil-page .contabil-hero {
+    min-height: 250px;
+    padding: 75px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-size: 140% 140%;
+    background-position: 0% 50%;
+    transition: background-position .7s ease, box-shadow .35s ease;
+    box-shadow: 0 10px 28px rgba(0,45,130,.16);
+}
+.contabil-page .contabil-hero::after {
+    width: 380px;
+    height: 380px;
+    right: -150px;
+    top: -210px;
+    border-color: rgba(255,255,255,.18);
+    box-shadow: 0 0 0 38px rgba(255,255,255,.035), 0 0 0 76px rgba(255,255,255,.025);
+    transition: transform .7s ease;
+}
+.contabil-page .contabil-hero:hover { background-position: 100% 50%; }
+.contabil-page .contabil-hero:hover::after { transform: scale(1.08) rotate(8deg); }
+.contabil-page .contabil-hero > span,
+.contabil-page .contabil-hero > h1,
+.contabil-page .contabil-hero > p {
+    position: relative;
+    z-index: 1;
+    animation: contabilHeroPadrao .75s ease both;
+}
+.contabil-page .contabil-hero > h1 { animation-delay: .05s; }
+.contabil-page .contabil-hero > p { animation-delay: .1s; }
+.contabil-page .contabil-hero > span {
+    transition: letter-spacing .3s ease, transform .3s ease;
+}
+.contabil-page .contabil-hero:hover > span {
+    letter-spacing: 3px;
+    transform: translateX(4px);
+}
+@keyframes contabilHeroPadrao {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.contabil-page .section-kicker,
+.contabil-page .accounting-title-kicker {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.contabil-page .datacempro-copy,
+.contabil-page .accounting-card {
+    border-radius: 15px;
+    box-shadow: 0 7px 22px rgba(12,48,91,.06);
+}
+.contabil-page .datacempro-copy:hover,
+.contabil-page .accounting-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 36px rgba(12,48,91,.12);
+}
+.contabil-page .image-placeholder,
+.contabil-page .accounting-logo-slot {
+    transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease, background .35s ease;
+}
+.contabil-page .accounting-logo-slot { border-radius: 15px; }
+.contabil-page .accounting-card h3,
+.contabil-page .datacempro-copy h2,
+.contabil-page .products-title h2 {
+    transition: color .3s ease, transform .3s ease;
+}
+.contabil-page .accounting-card:hover h3,
+.contabil-page .datacempro-copy:hover h2,
+.contabil-page .products-title:hover h2 {
+    color: #0875e1;
+    transform: translateX(4px);
+}
+.contabil-page .accounting-more,
+.contabil-page .page-return a {
+    border-radius: 8px;
+    transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+.contabil-page .accounting-more:hover,
+.contabil-page .page-return a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(8,117,225,.22);
+}
+@media (max-width: 650px) {
+    .contabil-page .contabil-hero { min-height: 220px; padding: 58px 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .contabil-page .contabil-hero,
+    .contabil-page .contabil-hero::after,
+    .contabil-page .contabil-hero > span,
+    .contabil-page .contabil-hero > h1,
+    .contabil-page .contabil-hero > p { animation: none !important; transition: none !important; }
+}
+/* ===== CORREÇÃO DO PADRÃO DOS TÍTULOS DOS TOPOs ===== */
+.page-hero > span,
+.page-hero > h1,
+.page-hero > p,
+.page-hero .page-hero-content span,
+.page-hero .page-hero-content h1,
+.page-hero .page-hero-content p {
+    color: #ffffff !important;
+}
+
+/* Páginas com classes específicas de hero */
+.empresa-hero > span, .empresa-hero > h1, .empresa-hero > p,
+.empresa-hero .page-hero-content span, .empresa-hero .page-hero-content h1, .empresa-hero .page-hero-content p,
+.solucoes-hero > span, .solucoes-hero > h1, .solucoes-hero > p,
+.solucoes-hero .page-hero-content span, .solucoes-hero .page-hero-content h1, .solucoes-hero .page-hero-content p,
+.clientes-hero > span, .clientes-hero > h1, .clientes-hero > p,
+.clientes-hero .page-hero-content span, .clientes-hero .page-hero-content h1, .clientes-hero .page-hero-content p,
+.trabalhe-page .page-hero > span, .trabalhe-page .page-hero > h1, .trabalhe-page .page-hero > p,
+.trabalhe-page .page-hero .page-hero-content span, .trabalhe-page .page-hero .page-hero-content h1, .trabalhe-page .page-hero .page-hero-content p,
+.contabil-hero > span, .contabil-hero > h1, .contabil-hero > p,
+.contabil-hero .page-hero-content span, .contabil-hero .page-hero-content h1, .contabil-hero .page-hero-content p,
+.gestao-hero > span, .gestao-hero > h1, .gestao-hero > p,
+.gestao-hero .page-hero-content span, .gestao-hero .page-hero-content h1, .gestao-hero .page-hero-content p {
+    color: #ffffff !important;
+}
+
+
+/* ===== PADRÃO ÚNICO DE AZUL — BANNERS DE TODAS AS PÁGINAS ===== */
+.page-hero,
+.empresa-hero,
+.solucoes-hero,
+.clientes-hero,
+.trabalhe-page .page-hero,
+.gestao-hero,
+.software-hero,
+.contabil-hero,
+.accounting-product-hero {
+    background: linear-gradient(110deg, #061b3b 0%, #0756b8 55%, #0875e1 100%) !important;
+    background-size: 140% 140% !important;
+    background-position: 0% 50% !important;
+}
+
+/* Mantém o mesmo movimento do fundo em todos os banners */
+.page-hero:hover,
+.empresa-hero:hover,
+.solucoes-hero:hover,
+.clientes-hero:hover,
+.trabalhe-page .page-hero:hover,
+.gestao-hero:hover,
+.software-hero:hover,
+.contabil-hero:hover,
+.accounting-product-hero:hover {
+    background-position: 100% 50% !important;
+}
+

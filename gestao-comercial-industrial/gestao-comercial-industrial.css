@@ -329,3 +329,183 @@
         max-width: 320px;
     }
 }
+
+/* =====================================================
+   PADRAO UNICO — AREA NOSSA SOLUCAO / GESTAO
+   Mantem o conteudo original e padroniza dimensoes,
+   espacos e interacoes com os demais modulos.
+===================================================== */
+.gestao-page .gestao-hero {
+    min-height: 250px;
+    padding: 75px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-size: 140% 140%;
+    background-position: 0% 50%;
+    transition: background-position .7s ease, box-shadow .35s ease;
+    box-shadow: 0 10px 28px rgba(0,45,130,.16);
+}
+.gestao-page .gestao-hero::after {
+    width: 380px;
+    height: 380px;
+    right: -150px;
+    top: -210px;
+    border-color: rgba(255,255,255,.18);
+    box-shadow: 0 0 0 38px rgba(255,255,255,.035), 0 0 0 76px rgba(255,255,255,.025);
+    transition: transform .7s ease;
+}
+.gestao-page .gestao-hero:hover { background-position: 100% 50%; }
+.gestao-page .gestao-hero:hover::after { transform: scale(1.08) rotate(8deg); }
+.gestao-page .gestao-hero > span,
+.gestao-page .gestao-hero > h1,
+.gestao-page .gestao-hero > p {
+    position: relative;
+    z-index: 1;
+    animation: gestaoHeroPadrao .75s ease both;
+}
+.gestao-page .gestao-hero > h1 { animation-delay: .05s; }
+.gestao-page .gestao-hero > p { animation-delay: .1s; }
+.gestao-page .gestao-hero > span {
+    transition: letter-spacing .3s ease, transform .3s ease;
+}
+.gestao-page .gestao-hero:hover > span {
+    letter-spacing: 3px;
+    transform: translateX(4px);
+}
+@keyframes gestaoHeroPadrao {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.gestao-page .gestao-intro,
+.gestao-page .gestao-more {
+    max-width: 1100px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.gestao-page .section-kicker {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.gestao-page .gestao-intro h2,
+.gestao-page .products-heading h2,
+.gestao-page .more-copy h2 {
+    color: #102447;
+    transition: color .3s ease, transform .3s ease;
+}
+.gestao-page .gestao-intro:hover h2,
+.gestao-page .products-heading:hover h2,
+.gestao-page .more-copy:hover h2 {
+    color: #0875e1;
+    transform: translateX(4px);
+}
+.gestao-page .product-list { gap: 20px; }
+.gestao-page .product-item,
+.gestao-page .product-tile {
+    border-radius: 15px;
+    border-color: #e1eaf4;
+    box-shadow: 0 7px 22px rgba(12,48,91,.06);
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+.gestao-page .product-item:hover,
+.gestao-page .product-tile:hover {
+    transform: translateY(-7px);
+    border-color: #b5d5f5;
+    box-shadow: 0 18px 36px rgba(12,48,91,.12);
+}
+.gestao-page .product-image-link {
+    border-radius: 11px;
+    background: linear-gradient(135deg,#f8fbff,#eaf3fd);
+}
+.gestao-page .product-image-link img {
+    max-width: 92%;
+    max-height: 92%;
+    object-fit: contain;
+    transition: transform .45s ease, filter .35s ease;
+}
+.gestao-page .product-tile:hover img {
+    transform: scale(1.05);
+    filter: brightness(.97);
+}
+.gestao-page .product-open {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    top: 10px;
+    transition: opacity .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+.gestao-page .product-tile:hover .product-open {
+    box-shadow: 0 8px 18px rgba(8,117,225,.25);
+}
+.gestao-page .more-highlight { border-radius: 17px; }
+.gestao-page .software-bottom-nav { text-align: left; }
+@media (max-width: 650px) {
+    .gestao-page .gestao-hero { min-height: 220px; padding: 58px 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .gestao-page .gestao-hero,
+    .gestao-page .gestao-hero::after,
+    .gestao-page .gestao-hero > span,
+    .gestao-page .gestao-hero > h1,
+    .gestao-page .gestao-hero > p { animation: none !important; transition: none !important; }
+}
+/* ===== CORREÇÃO DO PADRÃO DOS TÍTULOS DOS TOPOs ===== */
+.page-hero > span,
+.page-hero > h1,
+.page-hero > p,
+.page-hero .page-hero-content span,
+.page-hero .page-hero-content h1,
+.page-hero .page-hero-content p {
+    color: #ffffff !important;
+}
+
+/* Páginas com classes específicas de hero */
+.empresa-hero > span, .empresa-hero > h1, .empresa-hero > p,
+.empresa-hero .page-hero-content span, .empresa-hero .page-hero-content h1, .empresa-hero .page-hero-content p,
+.solucoes-hero > span, .solucoes-hero > h1, .solucoes-hero > p,
+.solucoes-hero .page-hero-content span, .solucoes-hero .page-hero-content h1, .solucoes-hero .page-hero-content p,
+.clientes-hero > span, .clientes-hero > h1, .clientes-hero > p,
+.clientes-hero .page-hero-content span, .clientes-hero .page-hero-content h1, .clientes-hero .page-hero-content p,
+.trabalhe-page .page-hero > span, .trabalhe-page .page-hero > h1, .trabalhe-page .page-hero > p,
+.trabalhe-page .page-hero .page-hero-content span, .trabalhe-page .page-hero .page-hero-content h1, .trabalhe-page .page-hero .page-hero-content p,
+.contabil-hero > span, .contabil-hero > h1, .contabil-hero > p,
+.contabil-hero .page-hero-content span, .contabil-hero .page-hero-content h1, .contabil-hero .page-hero-content p,
+.gestao-hero > span, .gestao-hero > h1, .gestao-hero > p,
+.gestao-hero .page-hero-content span, .gestao-hero .page-hero-content h1, .gestao-hero .page-hero-content p {
+    color: #ffffff !important;
+}
+
+
+/* ===== PADRÃO ÚNICO DE AZUL — BANNERS DE TODAS AS PÁGINAS ===== */
+.page-hero,
+.empresa-hero,
+.solucoes-hero,
+.clientes-hero,
+.trabalhe-page .page-hero,
+.gestao-hero,
+.software-hero,
+.contabil-hero,
+.accounting-product-hero {
+    background: linear-gradient(110deg, #061b3b 0%, #0756b8 55%, #0875e1 100%) !important;
+    background-size: 140% 140% !important;
+    background-position: 0% 50% !important;
+}
+
+/* Mantém o mesmo movimento do fundo em todos os banners */
+.page-hero:hover,
+.empresa-hero:hover,
+.solucoes-hero:hover,
+.clientes-hero:hover,
+.trabalhe-page .page-hero:hover,
+.gestao-hero:hover,
+.software-hero:hover,
+.contabil-hero:hover,
+.accounting-product-hero:hover {
+    background-position: 100% 50% !important;
+}
+

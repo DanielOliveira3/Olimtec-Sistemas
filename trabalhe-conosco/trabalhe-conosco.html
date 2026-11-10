@@ -19,7 +19,10 @@
 <a class="active" href="./trabalhe-conosco.html">Trabalhe Conosco</a>
 <a class="" href="../suporte/suporte.html">Suporte</a>
 <a class="" href="../contato/contato.html">Contato</a>
-<a class="contact-btn" href="../contato/contato.html">◯ Fale Conosco</a>
+<a class="contact-btn"
+   href="https://wa.me/5517991576056?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Olimtec."
+   target="_blank"
+   rel="noopener noreferrer">Fale Conosco <span>→</span></a>
 </nav>
 </header>
 <main>
@@ -40,23 +43,35 @@
     </div>
 
     <div class="campo-grupo">
-        <label for="txt_Nome">NOME: </label>
-        <input id="txt_Nome" type="text" name="nome" required>
+        <label for="txt_Nome">Nome Completo: </label>
+        <input id="txt_Nome" type="text" placeholder="Digite seu nome completo" name="nome" required >
     </div>
 
     <div class="campo-grupo">
         <label for="txt_Email">E-mail: </label>
-        <input id="txt_Email" type="email" name="email" required>
+        <input id="txt_Email" type="email" placeholder="seuemail@exemplo.com" name="email" required>
     </div>
 
     <div class="campo-grupo">
         <label for="txt_Telefone">Telefone: </label>
-        <input type="tel" id="txt_Telefone" 
-               name="telefone"
-               placeholder="(11) 99999-9999"
-               maxlength="15"
-               onkeyup="mascaraTelefone(this)"
-               required>
+        <div class="telefone-fields">
+            <input type="tel" id="txt_DDD"
+                   name="ddd_visual"
+                   placeholder="DDD"
+                   maxlength="2"
+                   class="ddd"
+                   inputmode="numeric"
+                   required>
+
+            <input type="tel" id="txt_Telefone_Visual"
+                   placeholder="99999-9999"
+                   maxlength="10"
+                   class="phone-number"
+                   inputmode="numeric"
+                   required>
+
+            <input type="hidden" id="txt_Telefone" name="telefone">
+        </div>
     </div>
 
     <h1>Informações e Curriculo</h1>
@@ -81,7 +96,7 @@
     
     <div class="campo-grupo">
         <label for="txt_Comentario">Mensagem: </label>
-        <textarea id="txt_Comentario" name="comentario" rows="3" placeholder="Escreva uma mensagem ou comentário (Opcional)..."></textarea>
+        <textarea id="txt_Comentario" name="comentario" rows="3" placeholder="Escreva uma mensagem ou comentário..."></textarea>
     </div>
 
    
@@ -90,8 +105,12 @@
     </div>
 
    
-    <div class="campo-grupo">
-        <button type="submit" class="btn-enviar">Enviar Currículo</button>
+    <div class="buttons">
+        <button type="submit" class="btn-enviar">➤ ENVIAR CURRÍCULO</button>
+
+        <a href="../index.html" class="btn-back">
+            ⌂ Voltar para o site
+        </a>
     </div>
 
 </form>
@@ -122,7 +141,7 @@
 </div>
 
 <div><h3>Navegação</h3><a href="../empresa/empresa.html">Empresa</a><a href="../solucao/solucao.html">Nossa Solução</a><a href="../clientes/clientes.html">Clientes</a><a href="./trabalhe-conosco.html">Trabalhe Conosco</a><a href="../suporte/suporte.html">Suporte</a><a href="../contato/contato.html">Contato</a></div>
-<div><h3>Contato</h3><p>☎ 17 99157-6056</p><p>✉ murilo@olimtec.com.br <br> ✉ jose_eduardo@olimtec.com.br</p><p>⌖ Olímpia - SP</p><p>◷ Seg - Sex: 08h às 18h</p></div>
+<div><h3>Contato</h3><p>☎ 17 99157-6056</p><p>✉ murilo@olimtec.com.br</p><p>✉ jose_eduardo@olimtec.com.br</p><p>⌖ Olímpia - SP</p><p>◷ Seg - Sex: 08h às 18h</p></div>
 </div>
 <div class="copyright">© 2026 OlimTec Sistemas. Todos os direitos reservados.</div>
 </footer>

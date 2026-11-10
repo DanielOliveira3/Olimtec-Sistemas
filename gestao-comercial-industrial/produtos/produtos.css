@@ -371,3 +371,135 @@
         scroll-behavior: auto !important;
     }
 }
+
+/* =====================================================
+   PADRAO UNICO — PAGINAS INDIVIDUAIS DOS SOFTWARES
+   Gestao Comercial e Industrial
+   ===================================================== */
+.software-page .software-hero {
+    min-height: 250px;
+    padding: 75px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-size: 140% 140%;
+    background-position: 0% 50%;
+    transition: background-position .7s ease, box-shadow .35s ease;
+    box-shadow: 0 10px 28px rgba(0,45,130,.16);
+}
+.software-page .software-hero::after {
+    width: 380px;
+    height: 380px;
+    right: -150px;
+    top: -210px;
+    border-color: rgba(255,255,255,.18);
+    box-shadow: 0 0 0 38px rgba(255,255,255,.035), 0 0 0 76px rgba(255,255,255,.025);
+    transition: transform .7s ease;
+}
+.software-page .software-hero:hover { background-position: 100% 50%; }
+.software-page .software-hero:hover::after { transform: scale(1.08) rotate(8deg); }
+.software-page .software-hero > span,
+.software-page .software-hero > h1,
+.software-page .software-hero > p {
+    position: relative;
+    z-index: 1;
+    animation: softwareHeroPadrao .75s ease both;
+}
+.software-page .software-hero > h1 { animation-delay: .05s; }
+.software-page .software-hero > p { animation-delay: .1s; }
+.software-page .software-hero > span { transition: letter-spacing .3s ease, transform .3s ease; }
+.software-page .software-hero:hover > span { letter-spacing: 3px; transform: translateX(4px); }
+@keyframes softwareHeroPadrao {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.software-page .software-overview,
+.software-page .detail-sections { max-width: 1100px; }
+.software-page .section-kicker {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.software-page .overview-copy,
+.software-page .detail-section {
+    border-radius: 15px;
+    border-color: #e1eaf4;
+    box-shadow: 0 7px 22px rgba(12,48,91,.06);
+}
+.software-page .overview-copy:hover,
+.software-page .detail-section:hover {
+    transform: translateY(-7px);
+    border-color: #b5d5f5;
+    box-shadow: 0 18px 36px rgba(12,48,91,.12);
+}
+.software-page .overview-copy h2,
+.software-page .detail-section h2 {
+    transition: color .3s ease, transform .3s ease;
+}
+.software-page .overview-copy:hover h2,
+.software-page .detail-section:hover h2 {
+    color: #0875e1;
+    transform: translateX(4px);
+}
+.software-page .image-slot {
+    border-radius: 15px;
+}
+.software-page .software-back {
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.software-page .software-back:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(8,117,225,.22);
+}
+@media (max-width: 650px) {
+    .software-page .software-hero { min-height: 220px; padding: 58px 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .software-page .software-hero,
+    .software-page .software-hero::after,
+    .software-page .software-hero > span,
+    .software-page .software-hero > h1,
+    .software-page .software-hero > p { animation: none !important; transition: none !important; }
+}
+
+/* Títulos do banner sempre brancos, seguindo o padrão das páginas */
+.software-page .software-hero > span,
+.software-page .software-hero > h1,
+.software-page .software-hero > p {
+    color: #ffffff !important;
+}
+
+
+/* ===== PADRÃO ÚNICO DE AZUL — BANNERS DE TODAS AS PÁGINAS ===== */
+.page-hero,
+.empresa-hero,
+.solucoes-hero,
+.clientes-hero,
+.trabalhe-page .page-hero,
+.gestao-hero,
+.software-hero,
+.contabil-hero,
+.accounting-product-hero {
+    background: linear-gradient(110deg, #061b3b 0%, #0756b8 55%, #0875e1 100%) !important;
+    background-size: 140% 140% !important;
+    background-position: 0% 50% !important;
+}
+
+/* Mantém o mesmo movimento do fundo em todos os banners */
+.page-hero:hover,
+.empresa-hero:hover,
+.solucoes-hero:hover,
+.clientes-hero:hover,
+.trabalhe-page .page-hero:hover,
+.gestao-hero:hover,
+.software-hero:hover,
+.contabil-hero:hover,
+.accounting-product-hero:hover {
+    background-position: 100% 50% !important;
+}
+
