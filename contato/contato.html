@@ -7,6 +7,7 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="stylesheet" href="/index.css">
 <link rel="stylesheet" href="./contato.css">
+<script src="./contato.js" defer></script>
 </head>
 <body>
 <header>
@@ -21,10 +22,8 @@
 <a class="contact-btn"
    href="https://wa.me/5517991576056?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Olimtec."
    target="_blank"
-   rel="noopener noreferrer">
-   ◯ Fale Conosco
-</a>
-```
+   rel="noopener noreferrer">Fale Conosco <span>→</span></a>
+
 </nav>
 </header>
 <main>
@@ -38,7 +37,7 @@
  
 
  
-    <!-- eu a baixo -->
+
 
     <!-- FORMULÁRIO -->
     <main class="container">
@@ -282,96 +281,15 @@
 
 
    
-    <!-- BUSCA AUTOMÁTICA DO CEP -->
-    <script>
-
-        const campoCep = document.getElementById("cep");
-        const statusCep = document.getElementById("cep-status");
-
-        campoCep.addEventListener("input", function () {
-
-            let cep = this.value.replace(/\D/g, "");
-
-            if (cep.length > 8) {
-                cep = cep.substring(0, 8);
-            }
-
-            this.value = cep.replace(
-                /^(\d{5})(\d{3})$/,
-                "$1-$2"
-            );
-
-            if (cep.length === 8) {
-                buscarCEP(cep);
-            } else {
-                statusCep.textContent = "";
-            }
-
-        });
 
 
-        async function buscarCEP(cep) {
-
-            statusCep.textContent = "Buscando endereço...";
-
-            try {
-
-                const resposta = await fetch(
-                    `https://viacep.com.br/ws/${cep}/json/`
-                );
-
-                if (!resposta.ok) {
-                    throw new Error("Erro na consulta");
-                }
-
-                const dados = await resposta.json();
-
-                if (dados.erro) {
-
-                    statusCep.textContent = "CEP não encontrado.";
-
-                    document.getElementById("endereco").value = "";
-                    document.getElementById("bairro").value = "";
-                    document.getElementById("cidade").value = "";
-                    document.getElementById("estado").value = "";
-
-                    return;
-                }
-
-                // PREENCHIMENTO AUTOMÁTICO
-                document.getElementById("endereco").value =
-                    dados.logradouro || "";
-
-                document.getElementById("bairro").value =
-                    dados.bairro || "";
-
-                document.getElementById("cidade").value =
-                    dados.localidade || "";
-
-                document.getElementById("estado").value =
-                    dados.uf || "";
-
-                statusCep.textContent = "Endereço encontrado com sucesso!";
-
-            } catch (erro) {
-
-                statusCep.textContent =
-                    "Não foi possível consultar o CEP. Tente novamente.";
-
-                console.error(erro);
-
-            }
-
-        }
-
-    </script>
 
 </body>
 </html>
-<!-- eu a cima -->
 
 
-<!-- Área reservada para o conteúdo da equipe responsável. -->
+
+
 </main>
 <footer>
 <div class="footer-grid">
@@ -397,7 +315,7 @@
 </div>
 
 <div><h3>Navegação</h3><a href="../empresa/empresa.html">Empresa</a><a href="../solucao/solucao.html">Nossa Solução</a><a href="../clientes/clientes.html">Clientes</a><a href="../trabalhe-conosco/trabalhe-conosco.html">Trabalhe Conosco</a><a href="../suporte/suporte.html">Suporte</a><a href="./contato.html">Contato</a></div>
-<div><h3>Contato</h3><p>☎ 17 99157-6056</p><p>✉ murilo@olimtec.com.br <br> ✉ jose_eduardo@olimtec.com.br</p><p>⌖ Olímpia - SP</p><p>◷ Seg - Sex: 08h às 18h</p></div>
+<div><h3>Contato</h3><p>☎ 17 99157-6056</p><p>✉ murilo@olimtec.com.br</p><p>✉ jose_eduardo@olimtec.com.br</p><p>⌖ Olímpia - SP</p><p>◷ Seg - Sex: 08h às 18h</p></div>
 </div>
 <div class="copyright">© 2026 OlimTec Sistemas. Todos os direitos reservados.</div>
 </footer>

@@ -41,7 +41,7 @@
 
 .footer-decoration-bottom {
     right: -120px;
-    bottom: 70px;
+    bottom: 0;
     width: 350px;
     height: 170px;
     background: linear-gradient(
@@ -473,4 +473,531 @@
 }
 
 
+
+
+/* ==========================================
+   ANIMAÇÕES E INTERAÇÕES - SUPORTE
+   Somente nesta página
+========================================== */
+
+main {
+    overflow: hidden;
+}
+
+.page-hero {
+    position: relative;
+    overflow: hidden;
+    background-size: 140% 140%;
+    background-position: 0% 50%;
+    transition: background-position .7s ease, box-shadow .35s ease;
+    box-shadow: 0 10px 28px rgba(0, 45, 130, .16);
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -170px;
+    top: -230px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 45px rgba(255,255,255,.035),
+        0 0 0 90px rgba(255,255,255,.025);
+    pointer-events: none;
+}
+
+.page-hero:hover {
+    background-position: 100% 50%;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 1;
+    animation: suporteHeroIn .75s ease both;
+}
+
+.page-hero-content span {
+    display: inline-block;
+    transition: letter-spacing .3s ease, transform .3s ease;
+}
+
+.page-hero:hover .page-hero-content span {
+    letter-spacing: 3px;
+    transform: translateX(4px);
+}
+
+@keyframes suporteHeroIn {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.ol-footer-container {
+    animation: suporteContentIn .75s .1s ease both;
+}
+
+@keyframes suporteContentIn {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.footer-section {
+    transition: transform .35s ease;
+}
+
+.footer-section:hover {
+    transform: translateY(-3px);
+}
+
+.heading-icon {
+    transition: transform .35s ease, border-radius .35s ease, box-shadow .35s ease;
+}
+
+.footer-section:hover .heading-icon {
+    transform: rotate(-7deg) scale(1.06);
+    border-radius: 50%;
+    box-shadow: 0 17px 32px rgba(0, 91, 210, .28);
+}
+
+.section-heading h2 {
+    transition: color .25s ease, transform .25s ease;
+}
+
+.footer-section:hover .section-heading h2 {
+    color: #0875e1;
+    transform: translateX(4px);
+}
+
+.section-heading h2::after {
+    transition: width .35s ease;
+}
+
+.footer-section:hover .section-heading h2::after {
+    width: 105px;
+}
+
+.useful-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.useful-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, #0875e1, #36b5ff);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform .3s ease;
+}
+
+.useful-link:hover::before {
+    transform: scaleY(1);
+}
+
+.link-icon,
+.link-name,
+.link-arrow {
+    transition: transform .3s ease, color .3s ease, background .3s ease;
+}
+
+.useful-link:hover .link-icon {
+    transform: scale(1.08);
+}
+
+.useful-link:hover .link-name {
+    color: #0754db;
+}
+
+.support-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.support-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #0875e1;
+    transform: scaleY(0);
+    transition: transform .3s ease;
+}
+
+.support-item:hover::before {
+    transform: scaleY(1);
+}
+
+.support-item:hover .support-icon {
+    transform: scale(1.08);
+    background: linear-gradient(145deg, #c8e4ff, #a9d0ff);
+}
+
+.support-icon {
+    transition: transform .3s ease, background .3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-hero,
+    .page-hero-content,
+    .ol-footer-container,
+    .footer-section,
+    .heading-icon,
+    .useful-link,
+    .support-item,
+    .support-icon {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ===== PADRÃO ÚNICO DE ANIMAÇÃO DO TOPO ===== */
+.page-hero {
+    position: relative;
+    overflow: hidden;
+    background-size: 140% 140%;
+    background-position: 0% 50%;
+    transition: background-position .7s ease, box-shadow .35s ease;
+    box-shadow: 0 10px 28px rgba(0, 45, 130, .16);
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    right: -150px;
+    top: -210px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 38px rgba(255,255,255,.035),
+        0 0 0 76px rgba(255,255,255,.025);
+    pointer-events: none;
+    transition: transform .7s ease;
+}
+
+.page-hero::after {
+    content: none !important;
+}
+
+.page-hero:hover {
+    background-position: 100% 50%;
+}
+
+.page-hero:hover::before {
+    transform: scale(1.08) rotate(8deg);
+}
+
+.page-hero > span,
+.page-hero > h1,
+.page-hero > p,
+.page-hero .page-hero-content {
+    position: relative;
+    z-index: 1;
+    animation: heroPadraoIn .75s ease both;
+}
+
+.page-hero > h1 {
+    animation-delay: .05s;
+}
+
+.page-hero > p {
+    animation-delay: .1s;
+}
+
+.page-hero .page-hero-content span,
+.page-hero > span {
+    display: inline-block;
+    transition: letter-spacing .3s ease, transform .3s ease;
+}
+
+.page-hero:hover .page-hero-content span,
+.page-hero:hover > span {
+    letter-spacing: 3px;
+    transform: translateX(4px);
+}
+
+@keyframes heroPadraoIn {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-hero,
+    .page-hero::before,
+    .page-hero > span,
+    .page-hero > h1,
+    .page-hero > p,
+    .page-hero .page-hero-content {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+/* =====================================================
+   PADRAO UNICO — TOPO DAS PAGINAS
+   Aplicado igualmente em todas as abas
+===================================================== */
+.page-hero {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    padding: 75px 8% !important;
+    min-height: 250px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    background-size: 140% 140% !important;
+    background-position: 0% 50% !important;
+    transition: background-position .7s ease, box-shadow .35s ease !important;
+    box-shadow: 0 10px 28px rgba(0, 45, 130, .16) !important;
+}
+
+.page-hero::before {
+    content: "" !important;
+    position: absolute !important;
+    z-index: 0 !important;
+    width: 380px !important;
+    height: 380px !important;
+    right: -150px !important;
+    top: -210px !important;
+    border: 1px solid rgba(255,255,255,.18) !important;
+    border-radius: 50% !important;
+    box-shadow:
+        0 0 0 38px rgba(255,255,255,.035),
+        0 0 0 76px rgba(255,255,255,.025) !important;
+    pointer-events: none !important;
+    transition: transform .7s ease !important;
+}
+
+.page-hero::after {
+    content: none !important;
+}
+
+.page-hero:hover {
+    background-position: 100% 50% !important;
+}
+
+.page-hero:hover::before {
+    transform: scale(1.08) rotate(8deg) !important;
+}
+
+.page-hero-content {
+    position: relative !important;
+    z-index: 1 !important;
+    width: auto !important;
+    max-width: 720px !important;
+    margin: 0 !important;
+    animation: heroPadraoEntrada .75s ease both !important;
+    transition: none !important;
+}
+
+.page-hero > span,
+.page-hero > h1,
+.page-hero > p {
+    position: relative !important;
+    z-index: 1 !important;
+    animation: heroPadraoEntrada .75s ease both !important;
+}
+
+.page-hero > h1,
+.page-hero-content h1 {
+    max-width: 720px !important;
+    animation-delay: .05s !important;
+}
+
+.page-hero > p,
+.page-hero-content p {
+    animation-delay: .1s !important;
+}
+
+.page-hero > span,
+.page-hero-content span {
+    display: inline-block !important;
+    transition: letter-spacing .3s ease, transform .3s ease !important;
+}
+
+.page-hero:hover > span,
+.page-hero:hover .page-hero-content span {
+    letter-spacing: 3px !important;
+    transform: translateX(4px) !important;
+}
+
+@keyframes heroPadraoEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 700px) {
+    .page-hero {
+        min-height: 220px !important;
+        padding: 55px 6% !important;
+    }
+
+    .page-hero::before {
+        width: 300px !important;
+        height: 300px !important;
+        right: -150px !important;
+        top: -170px !important;
+    }
+}
+/* ===== CORREÇÃO DO PADRÃO DOS TÍTULOS DOS TOPOs ===== */
+.page-hero > span,
+.page-hero > h1,
+.page-hero > p,
+.page-hero .page-hero-content span,
+.page-hero .page-hero-content h1,
+.page-hero .page-hero-content p {
+    color: #ffffff !important;
+}
+
+/* Páginas com classes específicas de hero */
+.empresa-hero > span, .empresa-hero > h1, .empresa-hero > p,
+.empresa-hero .page-hero-content span, .empresa-hero .page-hero-content h1, .empresa-hero .page-hero-content p,
+.solucoes-hero > span, .solucoes-hero > h1, .solucoes-hero > p,
+.solucoes-hero .page-hero-content span, .solucoes-hero .page-hero-content h1, .solucoes-hero .page-hero-content p,
+.clientes-hero > span, .clientes-hero > h1, .clientes-hero > p,
+.clientes-hero .page-hero-content span, .clientes-hero .page-hero-content h1, .clientes-hero .page-hero-content p,
+.trabalhe-page .page-hero > span, .trabalhe-page .page-hero > h1, .trabalhe-page .page-hero > p,
+.trabalhe-page .page-hero .page-hero-content span, .trabalhe-page .page-hero .page-hero-content h1, .trabalhe-page .page-hero .page-hero-content p,
+.contabil-hero > span, .contabil-hero > h1, .contabil-hero > p,
+.contabil-hero .page-hero-content span, .contabil-hero .page-hero-content h1, .contabil-hero .page-hero-content p,
+.gestao-hero > span, .gestao-hero > h1, .gestao-hero > p,
+.gestao-hero .page-hero-content span, .gestao-hero .page-hero-content h1, .gestao-hero .page-hero-content p {
+    color: #ffffff !important;
+}
+
+/* Correção: banner com o mesmo azul padrão das demais páginas */
+.page-hero {
+    background: linear-gradient(110deg, #061b3b, #0756b8, #0875e1) !important;
+    background-size: 140% 140% !important;
+    background-position: 0% 50% !important;
+}
+.page-hero:hover {
+    background-position: 100% 50% !important;
+}
+
+/* AJUSTE GLOBAL — FOOTER DE SUPORTE MAIS COMPACTO E ORGANIZADO */
+.ol-footer-container {
+    padding: 34px 48px 26px;
+    gap: 26px;
+}
+.footer-section {
+    padding: 6px 16px;
+}
+.section-heading {
+    gap: 16px;
+    margin-bottom: 22px;
+}
+.heading-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 20px;
+}
+.heading-icon svg {
+    width: 34px;
+    height: 34px;
+}
+.section-heading h2 {
+    font-size: 28px;
+}
+.footer-bottom {
+    min-height: 62px;
+    padding: 11px 6%;
+    gap: 20px;
+}
+.footer-bottom p {
+    font-size: 12px;
+}
+.bottom-divider {
+    height: 30px;
+}
+
+@media (max-width: 1000px) {
+    .ol-footer-container {
+        padding: 30px 30px 24px;
+        gap: 22px;
+    }
+    .heading-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 650px) {
+    .ol-footer-container {
+        padding: 26px 18px 20px;
+        gap: 20px;
+    }
+    .footer-section {
+        padding: 0;
+    }
+    .section-heading {
+        margin-bottom: 18px;
+    }
+    .section-heading h2 {
+        font-size: 24px;
+    }
+    .heading-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 17px;
+    }
+    .footer-bottom {
+        min-height: 58px;
+        padding: 14px 15px;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* ===== PADRÃO ÚNICO DE AZUL — BANNERS DE TODAS AS PÁGINAS ===== */
+.page-hero,
+.empresa-hero,
+.solucoes-hero,
+.clientes-hero,
+.trabalhe-page .page-hero,
+.gestao-hero,
+.software-hero,
+.contabil-hero,
+.accounting-product-hero {
+    background: linear-gradient(110deg, #061b3b 0%, #0756b8 55%, #0875e1 100%) !important;
+    background-size: 140% 140% !important;
+    background-position: 0% 50% !important;
+}
+
+/* Mantém o mesmo movimento do fundo em todos os banners */
+.page-hero:hover,
+.empresa-hero:hover,
+.solucoes-hero:hover,
+.clientes-hero:hover,
+.trabalhe-page .page-hero:hover,
+.gestao-hero:hover,
+.software-hero:hover,
+.contabil-hero:hover,
+.accounting-product-hero:hover {
+    background-position: 100% 50% !important;
+}
 

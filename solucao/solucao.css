@@ -1,0 +1,589 @@
+/* Página Nossa Solução */
+.solucoes-page {
+    overflow: hidden;
+}
+.solucoes-hero {
+    background: linear-gradient(110deg, #06204c, #006fe5);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+.solucoes-hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 390px;
+    height: 390px;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 50%;
+    right: -90px;
+    top: -200px;
+    box-shadow: 0 0 0 45px rgba(255,255,255,.035), 0 0 0 90px rgba(255,255,255,.025);
+}
+.solutions-intro {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 70px 30px 48px;
+}
+.section-kicker {
+    display: inline-block;
+    color: #0875e1;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+.solutions-intro h2, .options-heading h2 {
+    color: #102447;
+    font-size: clamp(27px, 3vw, 36px);
+    line-height: 1.2;
+    margin: 0 0 22px;
+}
+.solutions-intro p {
+    color: #53627a;
+    font-size: 16px;
+    line-height: 1.85;
+    margin: 0 0 16px;
+}
+.solution-options {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 28px 30px 90px;
+}
+.options-heading {
+    margin-bottom: 28px;
+}
+.options-heading h2 {
+    font-size: clamp(22px, 2.5vw, 29px);
+    margin: 0;
+}
+.solution-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+.solution-option {
+    display: block;
+    overflow: hidden;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(12,48,91,.10);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+.solution-option:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 38px rgba(12,48,91,.19);
+}
+.solution-image {
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e8f1fb, #cbdcf0);
+}
+.solution-image > img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease, filter .4s ease;
+}
+.solution-option:hover .solution-image > img {
+    transform: scale(1.07);
+    filter: brightness(.88);
+}
+.image-placeholder {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #6e85a2;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.image-placeholder small {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+.solution-label {
+    min-height: 58px;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    color: #fff;
+    background: linear-gradient(105deg, #06204c, #0875e1);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.1;
+    transition: background .3s ease;
+}
+.solution-label span {
+    position: absolute;
+    right: 17px;
+    opacity: 0;
+    transform: translate(-5px, 4px);
+    transition: opacity .3s ease, transform .3s ease;
+}
+.solution-option:hover .solution-label {
+    background: linear-gradient(105deg, #051a3b, #0756b8);
+}
+.solution-option:hover .solution-label span {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media(max-width:700px) {
+    .solutions-intro {
+        padding: 52px 22px 30px;
+    }
+    .solution-options {
+        padding: 25px 22px 65px;
+    }
+    .solution-card-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+    .solution-image {
+        height: 230px;
+    }
+}
+@media(prefers-reduced-motion:reduce) {
+    .solucoes-page *, .solucoes-page *::before, .solucoes-page *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* Interações da página Nossa Solução — seguindo o padrão da página Empresa */
+.solucoes-hero {
+    background-size: 140% 140%;
+    background-position: 0% 50%;
+    transition: background-position .6s ease;
+}
+.solucoes-hero:hover {
+    background-position: 100% 50%;
+}
+.solucoes-hero h1,
+.solucoes-hero p {
+    transition: transform .35s ease, text-shadow .35s ease;
+}
+
+.solutions-intro {
+    position: relative;
+}
+.solutions-intro h2,
+.options-heading h2 {
+    transition: color .3s ease, transform .3s ease;
+}
+.solutions-intro:hover h2,
+.options-heading:hover h2 {
+    color: #0875e1;
+    transform: translateX(5px);
+}
+.solutions-intro p {
+    transition: color .3s ease, transform .3s ease;
+}
+.solutions-intro p:hover {
+    color: #344762;
+    transform: translateX(4px);
+}
+.section-kicker {
+    transition: letter-spacing .3s ease, color .3s ease;
+}
+.solutions-intro:hover .section-kicker,
+.solution-options:hover .section-kicker {
+    letter-spacing: 2.8px;
+    color: #005fc4;
+}
+.solution-options {
+    transition: background-color .35s ease;
+}
+.solution-option {
+    position: relative;
+    border: 1px solid #e3eaf3;
+    border-radius: 12px;
+    transform: translateY(0);
+}
+.solution-option::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #0875e1, #36b5ff);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .35s ease;
+}
+.solution-option:hover::before {
+    transform: scaleX(1);
+}
+.solution-option:focus-visible {
+    outline: 3px solid #0875e1;
+    outline-offset: 4px;
+}
+
+
+.image-placeholder {
+    transition: color .3s ease, background .3s ease;
+}
+.solution-option:hover .image-placeholder {
+    color: #42678f;
+    background: rgba(221, 237, 255, .12);
+}
+.solution-label {
+    transition: background .3s ease, letter-spacing .3s ease;
+}
+.solution-option:hover .solution-label {
+    letter-spacing: .5px;
+}
+.solution-option:active {
+    transform: translateY(-3px) scale(.995);
+}
+@media (prefers-reduced-motion: reduce) {
+    .solucoes-page *,
+    .solucoes-page *::before,
+    .solucoes-page *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+
+/* Animação do topo — padrão Contato e Suporte */
+.solucoes-hero {
+    background-size: 140% 140%;
+    background-position: 0% 50%;
+    transition: background-position .7s ease, box-shadow .35s ease;
+    box-shadow: 0 10px 28px rgba(0, 45, 130, .16);
+}
+.solucoes-hero::after {
+    width: 380px;
+    height: 380px;
+    right: -150px;
+    top: -210px;
+    border-color: rgba(255,255,255,.18);
+    box-shadow: 0 0 0 38px rgba(255,255,255,.035), 0 0 0 76px rgba(255,255,255,.025);
+    transition: transform .7s ease;
+}
+.solucoes-hero:hover {
+    background-position: 100% 50%;
+}
+.solucoes-hero:hover::after {
+    transform: scale(1.08) rotate(8deg);
+}
+.solucoes-hero .page-hero-content {
+    animation: solucoesHeroIn .75s ease both;
+}
+.solucoes-hero .page-hero-content span {
+    display: inline-block;
+    transition: letter-spacing .3s ease, transform .3s ease;
+}
+.solucoes-hero:hover .page-hero-content span {
+    letter-spacing: 3px;
+    transform: translateX(4px);
+}
+@keyframes solucoesHeroIn {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .solucoes-hero,
+    .solucoes-hero::after,
+    .solucoes-hero .page-hero-content {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ===== PADRÃO ÚNICO DE ANIMAÇÃO DO TOPO ===== */
+.page-hero {
+    position: relative;
+    overflow: hidden;
+    background-size: 140% 140%;
+    background-position: 0% 50%;
+    transition: background-position .7s ease, box-shadow .35s ease;
+    box-shadow: 0 10px 28px rgba(0, 45, 130, .16);
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    right: -150px;
+    top: -210px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 38px rgba(255,255,255,.035),
+        0 0 0 76px rgba(255,255,255,.025);
+    pointer-events: none;
+    transition: transform .7s ease;
+}
+
+.page-hero::after {
+    content: none !important;
+}
+
+.page-hero:hover {
+    background-position: 100% 50%;
+}
+
+.page-hero:hover::before {
+    transform: scale(1.08) rotate(8deg);
+}
+
+.page-hero > span,
+.page-hero > h1,
+.page-hero > p,
+.page-hero .page-hero-content {
+    position: relative;
+    z-index: 1;
+    animation: heroPadraoIn .75s ease both;
+}
+
+.page-hero > h1 {
+    animation-delay: .05s;
+}
+
+.page-hero > p {
+    animation-delay: .1s;
+}
+
+.page-hero .page-hero-content span,
+.page-hero > span {
+    display: inline-block;
+    transition: letter-spacing .3s ease, transform .3s ease;
+}
+
+.page-hero:hover .page-hero-content span,
+.page-hero:hover > span {
+    letter-spacing: 3px;
+    transform: translateX(4px);
+}
+
+@keyframes heroPadraoIn {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-hero,
+    .page-hero::before,
+    .page-hero > span,
+    .page-hero > h1,
+    .page-hero > p,
+    .page-hero .page-hero-content {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+/* =====================================================
+   PADRAO UNICO — TOPO DAS PAGINAS
+   Aplicado igualmente em todas as abas
+===================================================== */
+.page-hero {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    padding: 75px 8% !important;
+    min-height: 250px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    background-size: 140% 140% !important;
+    background-position: 0% 50% !important;
+    transition: background-position .7s ease, box-shadow .35s ease !important;
+    box-shadow: 0 10px 28px rgba(0, 45, 130, .16) !important;
+}
+
+.page-hero::before {
+    content: "" !important;
+    position: absolute !important;
+    z-index: 0 !important;
+    width: 380px !important;
+    height: 380px !important;
+    right: -150px !important;
+    top: -210px !important;
+    border: 1px solid rgba(255,255,255,.18) !important;
+    border-radius: 50% !important;
+    box-shadow:
+        0 0 0 38px rgba(255,255,255,.035),
+        0 0 0 76px rgba(255,255,255,.025) !important;
+    pointer-events: none !important;
+    transition: transform .7s ease !important;
+}
+
+.page-hero::after {
+    content: none !important;
+}
+
+.page-hero:hover {
+    background-position: 100% 50% !important;
+}
+
+.page-hero:hover::before {
+    transform: scale(1.08) rotate(8deg) !important;
+}
+
+.page-hero-content {
+    position: relative !important;
+    z-index: 1 !important;
+    width: auto !important;
+    max-width: 720px !important;
+    margin: 0 !important;
+    animation: heroPadraoEntrada .75s ease both !important;
+    transition: none !important;
+}
+
+.page-hero > span,
+.page-hero > h1,
+.page-hero > p {
+    position: relative !important;
+    z-index: 1 !important;
+    animation: heroPadraoEntrada .75s ease both !important;
+}
+
+.page-hero > h1,
+.page-hero-content h1 {
+    max-width: 720px !important;
+    animation-delay: .05s !important;
+}
+
+.page-hero > p,
+.page-hero-content p {
+    animation-delay: .1s !important;
+}
+
+.page-hero > span,
+.page-hero-content span {
+    display: inline-block !important;
+    transition: letter-spacing .3s ease, transform .3s ease !important;
+}
+
+.page-hero:hover > span,
+.page-hero:hover .page-hero-content span {
+    letter-spacing: 3px !important;
+    transform: translateX(4px) !important;
+}
+
+@keyframes heroPadraoEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 700px) {
+    .page-hero {
+        min-height: 220px !important;
+        padding: 55px 6% !important;
+    }
+
+    .page-hero::before {
+        width: 300px !important;
+        height: 300px !important;
+        right: -150px !important;
+        top: -170px !important;
+    }
+}
+/* ===== CORREÇÃO DO PADRÃO DOS TÍTULOS DOS TOPOs ===== */
+.page-hero > span,
+.page-hero > h1,
+.page-hero > p,
+.page-hero .page-hero-content span,
+.page-hero .page-hero-content h1,
+.page-hero .page-hero-content p {
+    color: #ffffff !important;
+}
+
+/* Páginas com classes específicas de hero */
+.empresa-hero > span, .empresa-hero > h1, .empresa-hero > p,
+.empresa-hero .page-hero-content span, .empresa-hero .page-hero-content h1, .empresa-hero .page-hero-content p,
+.solucoes-hero > span, .solucoes-hero > h1, .solucoes-hero > p,
+.solucoes-hero .page-hero-content span, .solucoes-hero .page-hero-content h1, .solucoes-hero .page-hero-content p,
+.clientes-hero > span, .clientes-hero > h1, .clientes-hero > p,
+.clientes-hero .page-hero-content span, .clientes-hero .page-hero-content h1, .clientes-hero .page-hero-content p,
+.trabalhe-page .page-hero > span, .trabalhe-page .page-hero > h1, .trabalhe-page .page-hero > p,
+.trabalhe-page .page-hero .page-hero-content span, .trabalhe-page .page-hero .page-hero-content h1, .trabalhe-page .page-hero .page-hero-content p,
+.contabil-hero > span, .contabil-hero > h1, .contabil-hero > p,
+.contabil-hero .page-hero-content span, .contabil-hero .page-hero-content h1, .contabil-hero .page-hero-content p,
+.gestao-hero > span, .gestao-hero > h1, .gestao-hero > p,
+.gestao-hero .page-hero-content span, .gestao-hero .page-hero-content h1, .gestao-hero .page-hero-content p {
+    color: #ffffff !important;
+}
+
+
+/* ===== PADRÃO ÚNICO DE AZUL — BANNERS DE TODAS AS PÁGINAS ===== */
+.page-hero,
+.empresa-hero,
+.solucoes-hero,
+.clientes-hero,
+.trabalhe-page .page-hero,
+.gestao-hero,
+.software-hero,
+.contabil-hero,
+.accounting-product-hero {
+    background: linear-gradient(110deg, #061b3b 0%, #0756b8 55%, #0875e1 100%) !important;
+    background-size: 140% 140% !important;
+    background-position: 0% 50% !important;
+}
+
+/* Mantém o mesmo movimento do fundo em todos os banners */
+.page-hero:hover,
+.empresa-hero:hover,
+.solucoes-hero:hover,
+.clientes-hero:hover,
+.trabalhe-page .page-hero:hover,
+.gestao-hero:hover,
+.software-hero:hover,
+.contabil-hero:hover,
+.accounting-product-hero:hover {
+    background-position: 100% 50% !important;
+}
+
