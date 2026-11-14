@@ -144,3 +144,25 @@ html {
 .footer-grid > div:last-child p:last-child {
     margin-bottom: 0;
 }
+
+
+/* =========================================================
+   NAVBAR MOBILE — COMPORTAMENTO DE SCROLL
+   Somente em telas de celular.
+   ========================================================= */
+@media (max-width: 600px) {
+  header {
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    will-change: transform;
+  }
+
+  header.mobile-nav-hidden {
+    transform: translateY(-100%);
+    box-shadow: none !important;
+  }
+
+  header.mobile-nav-visible {
+    transform: translateY(0);
+  }
+}
+
