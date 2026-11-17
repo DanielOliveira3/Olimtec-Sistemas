@@ -41,7 +41,7 @@
 
 
     <!-- FORMULÁRIO -->
-    <main class="container">
+    <section class="container">
 
         <section class="contact-card">
 
@@ -55,7 +55,13 @@
             </p>
 
 
-            <form action="#" method="POST">
+            <form action="https://formsubmit.co/jose_eduardo@olimtec.com.br"
+      method="POST" id="form-contato">
+
+                <input type="hidden" name="_subject" value="Novo contato pelo site - OlimTec Sistemas">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_replyto" id="form-replyto">
 
                 <div class="form-grid">
 
@@ -63,33 +69,34 @@
                     <div class="form-column">
 
                         <div class="form-group">
-                            <label>Empresa:</label>
-                            <input type="text" name="empresa"
-                                placeholder="Nome da empresa">
+                            <label for="empresa">Empresa:</label>
+                            <input type="text" name="empresa" id="empresa"
+                                placeholder="Nome da empresa" autocomplete="organization">
                         </div>
 
                         <div class="form-group">
-                            <label>Nome:</label>
-                            <input type="text" name="nome"
-                                placeholder="Digite seu nome" required>
+                            <label for="nome">Nome:</label>
+                            <input type="text" name="nome" id="nome"
+                                placeholder="Digite seu nome" autocomplete="name" required>
                         </div>
 
                         <div class="form-group">
-                            <label>E-mail:</label>
-                            <input type="email" name="email"
-                                placeholder="seuemail@exemplo.com" required>
+                            <label for="email">E-mail:</label>
+                            <input type="email" name="email" id="email"
+                                placeholder="seuemail@exemplo.com" autocomplete="email" required>
                         </div>
 
                         <!-- TELEFONE COM DDD -->
                         <div class="form-group">
-                            <label>Telefone:</label>
+                            <label for="ddd">Telefone:</label>
 
                             <div class="phone-fields">
 
                                 <input
                                     type="tel"
-                                    name="ddd"
+                                    name="ddd" id="ddd"
                                     placeholder="DDD"
+                                    autocomplete="tel-area-code"
                                     maxlength="2"
                                     class="ddd"
                                     inputmode="numeric"
@@ -100,6 +107,7 @@
                                     type="tel"
                                     name="telefone"
                                     placeholder="99999-9999"
+                                    autocomplete="tel-local"
                                     maxlength="10"
                                     class="phone-number"
                                     inputmode="numeric"
@@ -117,7 +125,7 @@
 
                         <!-- CEP -->
                         <div class="form-group">
-                            <label>CEP:</label>
+                            <label for="cep">CEP:</label>
 
                             <input
                                 type="text"
@@ -126,6 +134,7 @@
                                 placeholder="00000-000"
                                 maxlength="9"
                                 inputmode="numeric"
+                                autocomplete="postal-code"
                                 required
                             >
 
@@ -135,48 +144,51 @@
 
                         <!-- ENDEREÇO -->
                         <div class="form-group">
-                            <label>Endereço:</label>
+                            <label for="endereco">Endereço:</label>
 
                             <input
                                 type="text"
                                 name="endereco"
                                 id="endereco"
                                 placeholder="Rua, nº - Digite seu endereço"
+                                autocomplete="street-address"
                             >
                         </div>
 
 
                         <!-- BAIRRO -->
                         <div class="form-group">
-                            <label>Bairro:</label>
+                            <label for="bairro">Bairro:</label>
 
                             <input
                                 type="text"
                                 name="bairro"
                                 id="bairro"
                                 placeholder="Seu bairro"
+                                autocomplete="address-level3"
                             >
                         </div>
 
 
                         <!-- CIDADE -->
                         <div class="form-group">
-                            <label>Cidade:</label>
+                            <label for="cidade">Cidade:</label>
 
                             <input
                                 type="text"
                                 name="cidade"
                                 id="cidade"
                                 placeholder="Sua cidade"
+                                autocomplete="address-level2"
                             >
                         </div>
 
 
                         <!-- ESTADO -->
                         <div class="form-group">
-                            <label>Estado:</label>
+                            <label for="estado">Estado:</label>
 
-                            <select name="estado" id="estado">
+                            <select name="estado" id="estado" autocomplete="address-level1">
 
                                 <option value="">Selecione</option>
                                 <option value="AC">Acre</option>
@@ -213,9 +225,9 @@
 
                         <!-- ASSUNTO -->
                         <div class="form-group">
-                            <label>Assunto:</label>
+                            <label for="assunto">Assunto:</label>
 
-                            <select name="assunto">
+                            <select name="assunto" id="assunto">
                                 <option value="">Qual o motivo do contato?</option>
                                 <option>Informações sobre serviços</option>
                                 <option>Suporte técnico</option>
@@ -233,11 +245,13 @@
                 <!-- MENSAGEM -->
                 <div class="form-group message-group">
 
-                    <label>Mensagem:</label>
+                    <label for="mensagem">Mensagem:</label>
 
                     <textarea
                         name="mensagem"
+                        id="mensagem"
                         placeholder="Escreva sua mensagem..."
+                        autocomplete="off"
                         required
                     ></textarea>
 
@@ -247,9 +261,9 @@
                 <!-- COMO CONHECEU -->
                 <div class="origin-group">
 
-                    <label>Como conheceu a OlimTec?</label>
+                    <label for="origem">Como conheceu a OlimTec?</label>
 
-                    <select name="origem">
+                    <select name="origem" id="origem">
                         <option value="">Selecione uma opção</option>
                         <option>Google</option>
                         <option>Instagram</option>
@@ -278,20 +292,25 @@
 
         </section>
 
-    </main>
+    </section>
 
 
    
 
 
 
-</body>
-</html>
 
 
-
-
-</main>
+<div id="modal-sucesso" class="modal-sucesso" aria-hidden="true">
+    <div class="modal-sucesso-overlay"></div>
+    <div class="modal-sucesso-card" role="dialog" aria-modal="true" aria-labelledby="modal-sucesso-titulo">
+        <button type="button" class="modal-sucesso-fechar" aria-label="Fechar">&times;</button>
+        <div class="modal-sucesso-icone">✓</div>
+        <h2 id="modal-sucesso-titulo">Mensagem enviada com sucesso!</h2>
+        <p>Recebemos sua mensagem. Nossa equipe entrará em contato em breve.</p>
+        <button type="button" class="modal-sucesso-ok">OK</button>
+    </div>
+</div>
 <footer>
 <div class="footer-grid">
 
