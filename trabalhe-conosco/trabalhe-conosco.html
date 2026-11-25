@@ -37,7 +37,13 @@
 
 <div class="container-formulario">
 
-<form action="enviar.php" method="POST" enctype="multipart/form-data">
+<form action="https://formsubmit.co/jose_eduardo@olimtec.com.br"
+      method="POST" id="form-trabalhe" enctype="multipart/form-data" autocomplete="on">
+
+    <input type="hidden" name="_subject" value="Novo currículo pelo site - OlimTec Sistemas">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_replyto" id="form-replyto" autocomplete="email">
 
     <div class="form-section-title">
         <h1>Dados Pessoais</h1>
@@ -45,19 +51,20 @@
 
     <div class="campo-grupo">
         <label for="txt_Nome">Nome Completo: </label>
-        <input id="txt_Nome" type="text" placeholder="Digite seu nome completo" name="nome" required >
+        <input id="txt_Nome" type="text" placeholder="Digite seu nome completo" name="nome" autocomplete="name" required>
     </div>
 
     <div class="campo-grupo">
         <label for="txt_Email">E-mail: </label>
-        <input id="txt_Email" type="email" placeholder="seuemail@exemplo.com" name="email" required>
+        <input id="txt_Email" type="email" placeholder="seuemail@exemplo.com" name="email" autocomplete="email" required>
     </div>
 
     <div class="campo-grupo">
-        <label for="txt_Telefone">Telefone: </label>
+        <label for="txt_DDD">Telefone: </label>
         <div class="telefone-fields">
             <input type="tel" id="txt_DDD"
                    name="ddd_visual"
+                   autocomplete="tel-area-code"
                    placeholder="DDD"
                    maxlength="2"
                    class="ddd"
@@ -65,13 +72,14 @@
                    required>
 
             <input type="tel" id="txt_Telefone_Visual"
+                   autocomplete="tel-national"
                    placeholder="99999-9999"
                    maxlength="10"
                    class="phone-number"
                    inputmode="numeric"
                    required>
 
-            <input type="hidden" id="txt_Telefone" name="telefone">
+            <input type="hidden" id="txt_Telefone" name="telefone" autocomplete="tel">
         </div>
     </div>
 
@@ -79,8 +87,8 @@
 
     
     <div class="campo-grupo">
-        <label>Curriculo: </label>
-        <input type="file" id="txt_Curriculo" name="curriculo" accept=".pdf" required onchange="atualizarEstiloPDF(this)">
+        <label for="txt_Curriculo">Currículo: </label>
+        <input type="file" id="txt_Curriculo" name="attachment" accept=".pdf" autocomplete="off" required>
         
         <label id="upload-card" for="txt_Curriculo">
             <div class="pdf-box">
@@ -97,7 +105,7 @@
     
     <div class="campo-grupo">
         <label for="txt_Comentario">Mensagem: </label>
-        <textarea id="txt_Comentario" name="comentario" rows="3" placeholder="Escreva uma mensagem ou comentário..."></textarea>
+        <textarea id="txt_Comentario" name="comentario" autocomplete="off" rows="3" placeholder="Escreva uma mensagem ou comentário..."></textarea>
     </div>
 
    
@@ -146,6 +154,18 @@
 </div>
 <div class="copyright">© 2026 OlimTec Sistemas. Todos os direitos reservados.</div>
 </footer>
+
+
+<div id="modal-sucesso" class="modal-sucesso" aria-hidden="true">
+    <div class="modal-sucesso-overlay"></div>
+    <div class="modal-sucesso-card" role="dialog" aria-modal="true" aria-labelledby="modal-sucesso-titulo">
+        <button type="button" class="modal-sucesso-fechar" aria-label="Fechar">&times;</button>
+        <div class="modal-sucesso-icone">✓</div>
+        <h2 id="modal-sucesso-titulo">Mensagem enviada com sucesso!</h2>
+        <p>Recebemos sua mensagem. Nossa equipe entrará em contato em breve.</p>
+        <button type="button" class="modal-sucesso-ok">OK</button>
+    </div>
+</div>
 
 </body>
 </html>

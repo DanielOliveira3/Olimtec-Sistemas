@@ -1476,3 +1476,115 @@
         max-width: 75px !important;
     }
 }
+
+
+/* Modal de sucesso do formulário de contato */
+body.modal-aberto {
+    overflow: hidden;
+}
+
+.modal-sucesso {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease, visibility .25s ease;
+}
+
+.modal-sucesso.ativo {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-sucesso-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(3, 15, 34, .62);
+    backdrop-filter: blur(4px);
+}
+
+.modal-sucesso-card {
+    position: relative;
+    z-index: 1;
+    width: min(460px, 100%);
+    padding: 34px 30px 30px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 24px 70px rgba(0, 20, 50, .28);
+    text-align: center;
+    transform: translateY(18px) scale(.98);
+    transition: transform .25s ease;
+}
+
+.modal-sucesso.ativo .modal-sucesso-card {
+    transform: translateY(0) scale(1);
+}
+
+.modal-sucesso-icone {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e8f7ee;
+    color: #219653;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.modal-sucesso-card h2 {
+    margin: 0 0 10px;
+    color: #061b3b;
+    font-size: 24px;
+}
+
+.modal-sucesso-card p {
+    margin: 0 auto 24px;
+    max-width: 360px;
+    color: #5d6878;
+    line-height: 1.6;
+}
+
+.modal-sucesso-ok {
+    min-width: 110px;
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 24px;
+    background: #0756b8;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.modal-sucesso-ok:hover {
+    background: #0875e1;
+    transform: translateY(-2px);
+}
+
+.modal-sucesso-fechar {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    border: 0;
+    background: transparent;
+    color: #718096;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-sucesso-fechar:hover {
+    color: #061b3b;
+}
+
+
